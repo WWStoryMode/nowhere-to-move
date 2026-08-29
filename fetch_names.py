@@ -141,7 +141,7 @@ def main() -> int:
 
     prov_path = DATA / "provenance.json"
     existing = json.loads(prov_path.read_text()) if prov_path.exists() else []
-    existing = [p for p in existing if "msoanames" not in p.get("url", "")]
+    existing = [p for p in existing if "msoanames" not in (p.get("url") or "")]
     prov_path.write_text(json.dumps(existing + PROVENANCE, indent=2))
 
     print("\n  PROVENANCE")

@@ -28,9 +28,8 @@ The investigation connects three analytical strands:
    total growth from three-bedroom-or-larger supply, affordable supply, and
    affordable family-sized supply where the source data permits.
 3. **Access to additional space.** Calculate the rent required to gain another
-   bedroom and express that annual cost as a share of local annual earnings. This
-   strand is planned but its data has not yet been integrated, so no findings are
-   reported for it.
+   bedroom and express that annual cost as a share of local annual earnings. The
+   validated annual dataset and interactive public time series cover 2015–2025.
 
 The project moves beyond asking whether an area is building enough homes. It
 asks whether the housing system is producing the right kinds of homes, in forms
@@ -94,6 +93,8 @@ other English local authorities where comparable development data is available.
 | MSOA Dec 2021 boundaries | ONS Open Geography Portal | Generalised clipped (BGC), EPSG:4326 |
 | MSOA 2011→2021 lookup | ONS Open Geography Portal | With `CHNGIND` change indicator |
 | MSOA names | House of Commons Library | `msoanames` — readable area names |
+| Bedroom rents | ONS Price Index of Private Rents | Exact source URL requires verification |
+| Resident earnings | ASHE, full-time workers | Exact source URL requires verification |
 
 All Open Government Licence v3.0. Exact URLs and retrieval timestamps are in
 `data/provenance.json`; raw API responses are cached in `data/raw/`.
@@ -138,8 +139,8 @@ Two outputs are produced as a result:
 ## The page
 
 A single-page Vite + React investigation combining a bedroom-mix exhibit,
-MSOA-level overcrowding maps and tables, household-growth context, the planned
-rent/earnings method, and the contemporary Lewisham Shopping Centre case study.
+MSOA-level overcrowding maps and tables, household-growth context, an interactive
+rent/earnings time series, and the contemporary Lewisham Shopping Centre case study.
 
 ```bash
 nvm use                 # Node 20.20.2 - the system Node 14 is too old for Vite
@@ -239,6 +240,33 @@ Only one scheme (Renaissance) is `confidence: high`, corroborated independently.
 Most rest on the datahub alone and are marked `medium`. Every entry carries a
 resolving per-record URL.
 
+## Access to additional space (Strand B)
+
+`data/access_to_space.json` contains the derived annual series for 2015–2025.
+It combines:
+
+- monthly Lewisham average rents for one, two, three and four-or-more bedrooms
+  from the ONS Price Index of Private Rents;
+- resident-based median gross annual earnings for full-time Lewisham workers
+  from ASHE.
+
+For each complete calendar year, `build_access_to_space.py` calculates the
+monthly differences for **1→2 bedrooms**, **2→3 bedrooms** and **3→4+ bedrooms**,
+takes the mean of the 12 monthly differences, multiplies it by 12, and divides
+the resulting annual additional rent by annual earnings. Spreadsheet-derived
+step and percentage columns from the supplied workbook export are not retained
+or used.
+
+The source extract includes January–July 2026, but 2026 is excluded because it
+is not a complete calendar year. The builder fails if a required raw field,
+month or earnings observation is absent, or if derived annual costs and
+percentages fail reconciliation.
+
+The supplied file and existing repository documentation did not include exact
+PIPR or ASHE source URLs. Their provenance entries are therefore marked
+`verification_required` rather than assigning unverified links. Those URLs must
+be confirmed before the series is published on the public page.
+
 ## Running the data fetch
 
 ```bash
@@ -248,6 +276,7 @@ python3 -m venv .venv
 .venv/bin/python fetch_names.py    # House of Commons Library MSOA names
 .venv/bin/python fetch_developments.py   # GLA Planning London Datahub completions
 .venv/bin/python build_developments.py   # -> data/developments.json
+.venv/bin/python build_access_to_space.py # -> data/access_to_space.json
 ```
 
 Raw downloads are cached to `data/raw/`, so reruns do not re-hit the APIs.
