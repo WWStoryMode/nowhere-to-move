@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import Header from './components/Header.jsx'
+import BedroomMix from './components/BedroomMix.jsx'
 import ViewToggle from './components/ViewToggle.jsx'
 import MapPanel from './components/MapPanel.jsx'
 import Legend from './components/Legend.jsx'
@@ -77,6 +78,8 @@ export default function App() {
   return (
     <div className="app">
       <Header />
+
+      <BedroomMix dark={dark} />
 
       <section className="section section--map" ref={mapSectionRef}>
         <div className="map-head">
