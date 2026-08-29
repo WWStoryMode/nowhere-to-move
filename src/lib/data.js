@@ -167,6 +167,13 @@ export const retrievalDate = (() => {
   })
 })()
 
+/** Provenance records keyed by stable dataset id for source-aware UI. */
+export const provenanceById = new Map(
+  (Array.isArray(provenance) ? provenance : [])
+    .filter((entry) => entry && typeof entry.id === 'string')
+    .map((entry) => [entry.id, entry])
+)
+
 export const gainedLost = {
   gained: areas.filter((a) => a.totalChange > 0).length,
   lost: areas.filter((a) => a.totalChange < 0).length,
@@ -188,6 +195,18 @@ const ACCESS_STEPS = {
  * hand-edited or stale JSON file cannot quietly reach a future visualisation.
  */
 export const accessToSpace = (() => {
+  const sourceIds = accessToSpaceRaw?._meta?.sources
+  if (!Array.isArray(sourceIds) || sourceIds.length === 0) {
+    throw new Error('access to space: source ids are missing')
+  }
+  for (const id of sourceIds) {
+    const source = provenanceById.get(id)
+    if (!source) throw new Error(`access to space: provenance is missing for ${id}`)
+    if (!source.url && source.verification_required !== true) {
+      throw new Error(`access to space: ${id} has neither a source URL nor a verification flag`)
+    }
+  }
+
   const rows = accessToSpaceRaw?.annual
   if (!Array.isArray(rows)) throw new Error('access to space: annual must be an array')
   if (rows.length !== ACCESS_YEARS.length) {

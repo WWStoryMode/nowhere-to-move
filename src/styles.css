@@ -162,6 +162,7 @@ a { color: var(--accent); }
 }
 .access-caveat strong { color: var(--ink); }
 .access-source { color: var(--muted); font-size: 12.5px; margin: 12px 0 0; }
+.source-unverified { font-style: italic; }
 
 .map-head { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between; margin-bottom: 18px; }
 

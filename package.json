@@ -6,6 +6,7 @@
   "description": "A reusable investigation of persistent household overcrowding, beginning with Lewisham",
   "scripts": {
     "dev": "vite",
+    "test": "python3 -m unittest discover -s tests -v",
     "build": "vite build",
     "preview": "vite preview"
   },
