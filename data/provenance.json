@@ -149,5 +149,15 @@
     "url": null,
     "verification_required": true,
     "note": "The opening attributes concerns about affordability and family-sized housing to local campaigners and describes arguments for redevelopment around delivery, regeneration, viability and deliverability. Exact campaign, council and developer sources are not present in the repository and require human verification. These positions are not project findings."
+  },
+  {
+    "id": "lewisham_shopping_centre_photo",
+    "source": "Lewisham Shopping Centre 2.jpg, photograph by Mx. Granger",
+    "url": "https://commons.wikimedia.org/wiki/File:Lewisham_Shopping_Centre_2.jpg",
+    "license": "CC0 1.0 Universal Public Domain Dedication",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "date_created": "2022-03-12",
+    "file": "src/assets/lewisham-shopping-centre.jpg",
+    "derivative": "Wikimedia Commons 1280px thumbnail of the 4096 × 3072 original"
   }
 ]
