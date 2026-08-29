@@ -28,12 +28,18 @@ The investigation connects three analytical strands:
    total growth from three-bedroom-or-larger supply, affordable supply, and
    affordable family-sized supply where the source data permits.
 3. **Access to additional space.** Calculate the rent required to gain another
-   bedroom and express that annual cost as a share of local annual earnings. The
-   validated annual dataset and interactive public time series cover 2015–2025.
+   bedroom using ONS PIPR average private rents, then express that annual cost as
+   a share of ASHE median gross annual earnings for full-time Lewisham residents.
+   The validated annual dataset and interactive public time series cover the
+   complete calendar years 2015–2025.
 
 The project moves beyond asking whether an area is building enough homes. It
 asks whether the housing system is producing the right kinds of homes, in forms
 that households needing additional space can realistically access.
+
+The evidence documents a mismatch between persistent overcrowding, the bedroom
+mix of housing supply, and the financial cost of obtaining additional space. It
+does not establish that any one of these measures caused another.
 
 ## The headline
 
@@ -136,6 +142,22 @@ Two outputs are produced as a result:
   cannot distinguish these, because they count households in an area, not the
   same households over time.
 
+### Access-to-space caveats
+
+- PIPR reports average **private-market rents**, not rents specifically paid by
+  overcrowded households. These rents are distinct from the planning-defined
+  affordable housing recorded in the development data.
+- ASHE median gross annual earnings for full-time Lewisham residents are an
+  earnings benchmark, not household income, private-renter household income,
+  overcrowded-household income or disposable income.
+- `4+ bedrooms` is a combined ONS category and is never treated as exactly four
+  bedrooms.
+- The analysis documents financial barriers consistent with constrained access
+  to space. It does not demonstrate that rent levels caused the observed
+  overcrowding.
+- The sources are aggregate datasets and cannot establish how individual
+  households behaved.
+
 ## The page
 
 A single-page Vite + React investigation combining a bedroom-mix exhibit,
@@ -149,8 +171,8 @@ npm run dev             # local development
 npm run build           # -> dist/index.html
 ```
 
-`npm run build` emits **one self-contained `dist/index.html`** (~565 KB). Every
-asset and both data files are inlined, so it opens offline straight from the
+`npm run build` emits **one self-contained `dist/index.html`** (~589 KB). Every
+asset and all data files are inlined, so it opens offline straight from the
 filesystem — double-click it, or AirDrop it to a phone. It makes no network
 requests at all: there is no `fetch`, no `XMLHttpRequest`, and no basemap tile
 layer.
@@ -250,17 +272,32 @@ It combines:
 - resident-based median gross annual earnings for full-time Lewisham workers
   from ASHE.
 
-For each complete calendar year, `build_access_to_space.py` calculates the
-monthly differences for **1→2 bedrooms**, **2→3 bedrooms** and **3→4+ bedrooms**,
-takes the mean of the 12 monthly differences, multiplies it by 12, and divides
-the resulting annual additional rent by annual earnings. Spreadsheet-derived
-step and percentage columns from the supplied workbook export are not retained
-or used.
+For each of **1→2 bedrooms**, **2→3 bedrooms** and **3→4+ bedrooms**,
+`build_access_to_space.py` applies this calculation:
 
-The source extract includes January–July 2026, but 2026 is excluded because it
-is not a complete calendar year. The builder fails if a required raw field,
-month or earnings observation is absent, or if derived annual costs and
-percentages fail reconciliation.
+```text
+For each month:
+  larger-bedroom average private rent − smaller-bedroom average private rent
+
+For each complete calendar year:
+  mean monthly rent step × 12 = annual additional rent
+
+Then:
+  annual additional rent ÷ median gross annual earnings × 100
+```
+
+The earnings denominator is ASHE resident-based median gross annual earnings for
+full-time Lewisham workers. It is a benchmark for one full-time resident, not a
+measure of household income. Spreadsheet-derived step and percentage columns
+from the supplied workbook export are not retained or used.
+
+PIPR measures average rents in the private rental market. Those rents are not
+the planning-defined affordable housing counted in `data/developments.json`.
+
+The main comparable annual period is **2015–2025**. The source extract includes
+January–July 2026, but 2026 is excluded because it is not a complete calendar
+year. The builder fails if a required raw field, month or earnings observation
+is absent, or if derived annual costs and percentages fail reconciliation.
 
 The supplied file and existing repository documentation did not include exact
 PIPR or ASHE source URLs. Their provenance entries are therefore marked

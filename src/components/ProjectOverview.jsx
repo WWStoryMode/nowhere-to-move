@@ -19,15 +19,15 @@ export default function ProjectOverview() {
         <ol className="overview-strands">
           <li>
             <strong>Overcrowding outcome</strong>
-            <span>Count, rate and geographic variation between 2011 and 2021.</span>
+            <span>Count, rate and geographic variation between Census 2011 and Census 2021.</span>
           </li>
           <li>
             <strong>Housing supply and bedroom mix</strong>
-            <span>Total, family-sized, affordable and affordable family-sized supply.</span>
+            <span>Completed one- and two-bedroom versus three-bedroom-or-larger supply, including affordable family-sized delivery where the data permits.</span>
           </li>
           <li>
             <strong>Access to additional space</strong>
-            <span>The rent needed to gain another bedroom, measured against local earnings.</span>
+            <span>Private-market rent steps between bedroom sizes, compared with median gross annual earnings of full-time Lewisham residents.</span>
           </li>
         </ol>
       </div>
@@ -36,10 +36,10 @@ export default function ProjectOverview() {
         <p className="section-kicker">Objective</p>
         <h2>Ask whether households can realistically move</h2>
         <p>
-          The project moves beyond asking whether an area is building enough homes. It asks
-          whether the housing system is producing the right kinds of homes, in forms that
-          households needing additional space can realistically access. Lewisham provides
-          the first implementation of a transparent method designed for reuse elsewhere.
+          The evidence documents a mismatch between persistent overcrowding, the bedroom mix
+          of housing supply, and the financial cost of obtaining additional space. It does
+          not establish that one caused another. Lewisham provides the first implementation
+          of a transparent method designed for reuse elsewhere.
         </p>
       </div>
     </section>

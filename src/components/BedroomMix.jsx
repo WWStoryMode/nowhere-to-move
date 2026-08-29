@@ -47,9 +47,9 @@ export default function BedroomMix({ dark }) {
       <div className="mix-hero">
         <span className="mix-hero-fig">{s.one_or_two_bed_pct}%</span>
         <span className="mix-hero-text">
-          of the homes recorded were <strong>one or two bed</strong>. The question is not
-          only how many homes were built, but whether the supply expanded realistic options
-          for households needing more space.
+          of the homes recorded were <strong>one or two bed</strong>. Only{' '}
+          {s.three_plus_bed_pct}% had three bedrooms or more, distinguishing total housing
+          growth from supply that provides additional bedrooms.
         </span>
       </div>
 
@@ -96,6 +96,12 @@ export default function BedroomMix({ dark }) {
       </ul>
 
       {studioCaveat && <p className="mix-caveat">{studioCaveat}</p>}
+
+      <p className="section-transition">
+        The question is not only how many homes were built, but whether households needing
+        more space have realistic routes into suitably sized housing. One possible route is
+        the private rental market—where gaining another bedroom carries an additional cost.
+      </p>
     </section>
   )
 }
