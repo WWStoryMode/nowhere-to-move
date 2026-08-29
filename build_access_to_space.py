@@ -60,6 +60,18 @@ SOURCE_PROVENANCE = [
         ),
         "file": "data/raw/lewisham_pipr_monthly_by_bedroom.csv",
         "coverage": "2015-01 to 2026-07; only complete calendar years 2015-2025 are published",
+        "market": "Private rental market; not planning-defined affordable housing",
+        "measure": "Average monthly rent by bedroom count; 4+ bedrooms is a combined ONS category",
+        "derived_method": (
+            "For each month, larger-bedroom rent minus smaller-bedroom rent. For each "
+            "complete calendar year, mean monthly step multiplied by 12. Annual step divided "
+            "by ASHE median gross annual earnings, multiplied by 100."
+        ),
+        "caveats": [
+            "Average private rents are not rents specifically paid by overcrowded households.",
+            "Aggregate rent data cannot establish household behaviour.",
+            "The analysis does not demonstrate that rent levels caused observed overcrowding.",
+        ],
     },
     {
         "id": "ashe_resident_earnings",
@@ -72,6 +84,12 @@ SOURCE_PROVENANCE = [
         ),
         "file": "data/raw/lewisham_ashe_annual_earnings.csv",
         "coverage": "2015-2025",
+        "measure": "Resident-based median gross annual earnings for full-time workers",
+        "benchmark": "One full-time resident; not household or disposable income",
+        "caveats": [
+            "The earnings measure is not specific to private renters or overcrowded households.",
+            "Aggregate earnings data cannot establish household behaviour.",
+        ],
     },
 ]
 

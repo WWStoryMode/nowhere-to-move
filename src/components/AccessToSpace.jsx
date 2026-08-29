@@ -202,9 +202,10 @@ export default function AccessToSpace() {
       <p className="section-kicker">Access to additional space</p>
       <h2 id="access-h">What does one more bedroom cost?</h2>
       <p className="section-lede">
-        The private-rent step between bedroom sizes is not equal. This series compares the
-        additional annual rent associated with moving to a larger home in Lewisham, and the
-        same cost against the earnings of one full-time resident.
+        For households needing more space, the private rental market introduces another
+        constraint: the additional rent required to gain another bedroom. This series
+        compares that annual step in Lewisham and measures it against the earnings of one
+        full-time resident.
       </p>
 
       <div className="access-findings">

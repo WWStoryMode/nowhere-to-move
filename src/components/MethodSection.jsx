@@ -8,6 +8,28 @@ export default function MethodSection() {
         mix of housing supply, and the cost of accessing an additional bedroom relative to
         local earnings.
       </p>
+      <ol className="method-steps">
+        <li>
+          <strong>Overcrowding outcome:</strong> compare household count and rate at Census
+          2011 and Census 2021, including geographic variation between MSOAs.
+        </li>
+        <li>
+          <strong>Housing supply and bedroom mix:</strong> separate completed one- and
+          two-bedroom homes from three-bedroom-or-larger homes, and identify affordable
+          family-sized delivery where the planning data permits.
+        </li>
+        <li>
+          <strong>Access to additional space:</strong> for each month, subtract the
+          smaller-bedroom PIPR average private rent from the larger-bedroom rent. For each
+          complete calendar year, take the mean monthly step and multiply by 12. Divide that
+          annual rent step by ASHE median gross annual earnings for full-time Lewisham
+          residents, then multiply by 100.
+        </li>
+      </ol>
+      <p>
+        PIPR describes the <strong>private rental market</strong>. It is analytically distinct
+        from the planning-defined affordable housing recorded in the development data.
+      </p>
       <p>
         Census, rent and earnings measures come from national official datasets and can
         potentially be applied to other areas. The development analysis currently relies on
