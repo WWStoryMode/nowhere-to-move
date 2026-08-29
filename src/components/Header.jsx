@@ -1,5 +1,6 @@
 import { CONSENTED } from '../lib/consented.js'
 import { n } from '../lib/format.js'
+import shoppingCentrePhoto from '../assets/lewisham-shopping-centre.jpg'
 
 export default function Header() {
   return (
@@ -33,10 +34,19 @@ export default function Header() {
             require verification.
           </p>
         </div>
-        <div className="opening-visual" aria-label="Space reserved for a verified Lewisham Shopping Centre image">
-          <span>Lewisham Shopping Centre</span>
-          <small>Image space — no unverified asset used</small>
-        </div>
+        <figure className="opening-visual">
+          <img
+            src={shoppingCentrePhoto}
+            alt="Interior of Lewisham Shopping Centre, photographed in March 2022"
+          />
+          <figcaption>
+            Lewisham Shopping Centre · Photograph by{' '}
+            <a href="https://commons.wikimedia.org/wiki/File:Lewisham_Shopping_Centre_2.jpg"
+              target="_blank" rel="noopener noreferrer">Mx. Granger / Wikimedia Commons</a>{' '}
+            · <a href="https://creativecommons.org/publicdomain/zero/1.0/"
+              target="_blank" rel="noopener noreferrer">CC0 1.0</a>
+          </figcaption>
+        </figure>
       </div>
     </header>
   )

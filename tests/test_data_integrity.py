@@ -150,6 +150,7 @@ class FrontendContractTests(unittest.TestCase):
         cls.households = (ROOT / "src/components/HouseholdsChart.jsx").read_text()
         cls.table = (ROOT / "src/components/TableView.jsx").read_text()
         cls.closing = (ROOT / "src/components/CurrentCaseStudy.jsx").read_text()
+        cls.header = (ROOT / "src/components/Header.jsx").read_text()
         cls.overview = (ROOT / "src/components/ProjectOverview.jsx").read_text()
         cls.readme = (ROOT / "README.md").read_text()
         cls.styles = (ROOT / "src/styles.css").read_text()
@@ -211,6 +212,15 @@ class FrontendContractTests(unittest.TestCase):
             self.assertIn(contract, self.closing)
         self.assertIn("does not show that housebuilding caused", self.closing)
         self.assertIn("cannot tell us what the Shopping Centre redevelopment will do", self.closing)
+
+    def test_opening_photo_is_local_accessible_and_sourced(self):
+        photo = ROOT / "src/assets/lewisham-shopping-centre.jpg"
+        self.assertTrue(photo.is_file())
+        self.assertGreater(photo.stat().st_size, 0)
+        self.assertIn("import shoppingCentrePhoto", self.header)
+        self.assertIn('alt="Interior of Lewisham Shopping Centre', self.header)
+        self.assertIn("commons.wikimedia.org/wiki/File:Lewisham_Shopping_Centre_2.jpg", self.header)
+        self.assertIn("creativecommons.org/publicdomain/zero/1.0/", self.header)
 
 
 if __name__ == "__main__":
