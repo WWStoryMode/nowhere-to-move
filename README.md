@@ -1,0 +1,90 @@
+# Nowhere to Move
+
+Evidence pack for the **Save Lewisham Shopping Centre** campaign.
+
+Measures how household overcrowding changed across Lewisham between the 2011
+and 2021 censuses at MSOA level, to test whether the consented Landsec scheme
+(1,744 homes, 329 "affordable", mostly 1–2 bed) matches where family-sized need
+actually is.
+
+## The headline
+
+| | 2011 | 2021 | Change |
+|---|---|---|---|
+| Overcrowded households | 14,018 | 13,964 | **−54** |
+| All households | 116,091 | 122,390 | **+6,299** |
+| Overcrowding rate | 12.08% | 11.41% | −0.67pp |
+
+The **rate** fell only because the denominator grew. The **count** of
+overcrowded households was flat. Roughly 6,300 new households arrived and the
+number of overcrowded families did not move.
+
+Rate and count must always be read together. A rate quoted alone tells the
+opposite story.
+
+## Definitions
+
+- **Overcrowded** = occupancy rating for bedrooms of −1, *plus* −2 or less.
+- **Rate** = overcrowded households ÷ total all households.
+- "Total" is a total, never summed as if it were a category.
+
+## Sources
+
+| Source | Dataset | Notes |
+|---|---|---|
+| Census 2021 TS052 | Nomis `NM_2070_1` | Occupancy rating for bedrooms |
+| Census 2011 QS412EW | Nomis `NM_544_1` | Occupancy rating (bedrooms), 2014-01-17 revision |
+| MSOA Dec 2021 boundaries | ONS Open Geography Portal | Generalised clipped (BGC), EPSG:4326 |
+| MSOA 2011→2021 lookup | ONS Open Geography Portal | With `CHNGIND` change indicator |
+| MSOA names | House of Commons Library | `msoanames` — readable area names |
+
+All Open Government Licence v3.0. Exact URLs and retrieval timestamps are in
+`data/provenance.json`; raw API responses are cached in `data/raw/`.
+
+## Geography note
+
+Lewisham had **36 MSOAs in 2011** and **37 in 2021**. One area changed:
+`E02000664` (Lewisham 012) **split** into `E02007008` and `E02007009`
+(`CHNGIND = S`). The other 35 kept their codes.
+
+Two outputs are produced as a result:
+
+- `data/lewisham_overcrowding.csv` — 37 rows on 2021 codes. The two split
+  children have **blank** 2011 columns, because the 2011 parent cannot be
+  divided between them without fabricating data.
+- `data/lewisham_overcrowding_like_for_like.csv` — 36 rows on the 2011
+  footprint, with the two 2021 children summed back onto the parent. Exact
+  arithmetic on household counts, so the years compare like for like. **This is
+  the file the visualisation uses.**
+
+> Caution: the ONS service `MSOA11_MSOA21_LAD22_EW_LU_v2` has `CHNGIND` entirely
+> null and contains only one of the two split rows, silently losing Lewisham
+> 040. Use `MSOA_(2011)_to_MSOA_(2021)_to_Local_Authority_District_(2022)_Lookup_for_EW_v2`
+> instead — `fetch_data.py` hard-fails if `CHNGIND` comes back empty.
+
+## Caveats
+
+- 2021 MSOA sums differ from the independently-fetched borough total by +3
+  overcrowded / −2 households (~0.02%). This is ONS **cell-key perturbation**,
+  applied independently at each geography level. 2011 reconciles exactly
+  because it used record swapping instead. Published MSOA figures are used as
+  they stand and are never rescaled to force a match.
+- The 2021 census was taken during lockdown (March 2021), which affected
+  student and shared households.
+- **This data cannot show whether families moved out.** A falling overcrowding
+  rate is consistent with two very different stories: conditions improved for
+  the people who stayed, or overcrowded households left the borough and
+  better-off households replaced them. Census counts at two points in time
+  cannot distinguish these, because they count households in an area, not the
+  same households over time.
+
+## Running the data fetch
+
+```bash
+python3 -m venv .venv
+.venv/bin/pip install requests pandas
+.venv/bin/python fetch_data.py
+```
+
+Raw downloads are cached to `data/raw/`, so reruns do not re-hit the APIs.
+Nothing is fabricated, interpolated or filled — a failed fetch raises.

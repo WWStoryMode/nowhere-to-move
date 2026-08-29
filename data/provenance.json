@@ -1,0 +1,90 @@
+[
+  {
+    "source": "Nomis dataset search for QS412EW",
+    "url": "https://www.nomisweb.co.uk/api/v01/dataset/def.sdmx.json?search=*QS412*",
+    "retrieved": "2026-08-29T12:19:00+00:00",
+    "cached": true,
+    "file": "data/raw/nomis_search_qs412.json",
+    "bytes": 4475
+  },
+  {
+    "source": "NM_2070_1 geography types within Lewisham",
+    "url": "https://www.nomisweb.co.uk/api/v01/dataset/NM_2070_1/geography/E09000023.def.sdmx.json",
+    "retrieved": "2026-08-29T12:19:01+00:00",
+    "cached": true,
+    "file": "data/raw/NM_2070_1_geography_E09000023.json",
+    "bytes": 2950
+  },
+  {
+    "source": "NM_2070_1 MSOA members of E09000023TYPE152",
+    "url": "https://www.nomisweb.co.uk/api/v01/dataset/NM_2070_1/geography/E09000023TYPE152.def.sdmx.json",
+    "retrieved": "2026-08-29T12:19:02+00:00",
+    "cached": true,
+    "file": "data/raw/NM_2070_1_geography_E09000023TYPE152.json",
+    "bytes": 13453
+  },
+  {
+    "source": "NM_544_1 geography types within Lewisham",
+    "url": "https://www.nomisweb.co.uk/api/v01/dataset/NM_544_1/geography/E09000023.def.sdmx.json",
+    "retrieved": "2026-08-29T12:19:02+00:00",
+    "cached": true,
+    "file": "data/raw/NM_544_1_geography_E09000023.json",
+    "bytes": 3503
+  },
+  {
+    "source": "NM_544_1 MSOA members of E09000023TYPE297",
+    "url": "https://www.nomisweb.co.uk/api/v01/dataset/NM_544_1/geography/E09000023TYPE297.def.sdmx.json",
+    "retrieved": "2026-08-29T12:19:03+00:00",
+    "cached": true,
+    "file": "data/raw/NM_544_1_geography_E09000023TYPE297.json",
+    "bytes": 13145
+  },
+  {
+    "source": "2021 TS052 (MSOA)",
+    "url": "https://www.nomisweb.co.uk/api/v01/dataset/NM_2070_1.data.csv?geography=E09000023TYPE152&measures=20100",
+    "retrieved": "2026-08-29T12:19:03+00:00",
+    "cached": true,
+    "file": "data/raw/NM_2070_1_E09000023TYPE152.csv",
+    "bytes": 72422
+  },
+  {
+    "source": "2011 QS412EW (MSOA)",
+    "url": "https://www.nomisweb.co.uk/api/v01/dataset/NM_544_1.data.csv?geography=E09000023TYPE297&rural_urban=0&measures=20100",
+    "retrieved": "2026-08-29T12:19:03+00:00",
+    "cached": true,
+    "file": "data/raw/NM_544_1_E09000023TYPE297.csv",
+    "bytes": 107743
+  },
+  {
+    "source": "2021 TS052 (borough)",
+    "url": "https://www.nomisweb.co.uk/api/v01/dataset/NM_2070_1.data.csv?geography=E09000023&measures=20100",
+    "retrieved": "2026-08-29T12:19:03+00:00",
+    "cached": true,
+    "file": "data/raw/NM_2070_1_E09000023.csv",
+    "bytes": 2381
+  },
+  {
+    "source": "2011 QS412EW (borough)",
+    "url": "https://www.nomisweb.co.uk/api/v01/dataset/NM_544_1.data.csv?geography=E09000023&rural_urban=0&measures=20100",
+    "retrieved": "2026-08-29T12:19:04+00:00",
+    "cached": true,
+    "file": "data/raw/NM_544_1_E09000023.csv",
+    "bytes": 3605
+  },
+  {
+    "source": "MSOA 2011 -> MSOA 2021 -> LAD 2022 lookup (Lewisham)",
+    "url": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/MSOA_(2011)_to_MSOA_(2021)_to_Local_Authority_District_(2022)_Lookup_for_EW_v2/FeatureServer/0/query?where=LAD22CD%3D%27E09000023%27&outFields=%2A&returnGeometry=false&outSR=4326&f=json",
+    "retrieved": "2026-08-29T12:19:04+00:00",
+    "cached": true,
+    "file": "data/raw/msoa11_msoa21_lad22_lookup_lewisham.json",
+    "bytes": 8929
+  },
+  {
+    "source": "MSOA Dec 2021 boundaries, generalised clipped (BGC), EPSG:4326",
+    "url": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Middle_layer_Super_Output_Areas_December_2021_Boundaries_EW_BGC_V3/FeatureServer/0/query?where=MSOA21CD+IN+%28%27E02000653%27%2C%27E02000654%27%2C%27E02000655%27%2C%27E02000657%27%2C%27E02000658%27%2C%27E02000659%27%2C%27E02000660%27%2C%27E02000661%27%2C%27E02000662%27%2C%27E02000663%27%2C%27E02000665%27%2C%27E02000666%27%2C%27E02000667%27%2C%27E02000668%27%2C%27E02000669%27%2C%27E02000670%27%2C%27E02000671%27%2C%27E02000672%27%2C%27E02000673%27%2C%27E02000674%27%2C%27E02000675%27%2C%27E02000676%27%2C%27E02000677%27%2C%27E02000678%27%2C%27E02000679%27%2C%27E02000680%27%2C%27E02000681%27%2C%27E02000682%27%2C%27E02000683%27%2C%27E02000685%27%2C%27E02000686%27%2C%27E02000687%27%2C%27E02006783%27%2C%27E02006784%27%2C%27E02006798%27%2C%27E02007008%27%2C%27E02007009%27%29&outFields=MSOA21CD%2CMSOA21NM&returnGeometry=true&outSR=4326&f=geojson",
+    "retrieved": "2026-08-29T12:19:04+00:00",
+    "cached": true,
+    "file": "data/raw/msoa21_bgc_lewisham.geojson",
+    "bytes": 88230
+  }
+]

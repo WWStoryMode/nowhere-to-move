@@ -1,0 +1,4 @@
+{
+  "url": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/MSOA_(2011)_to_MSOA_(2021)_to_Local_Authority_District_(2022)_Lookup_for_EW_v2/FeatureServer/0/query?where=LAD22CD%3D%27E09000023%27&outFields=%2A&returnGeometry=false&outSR=4326&f=json",
+  "retrieved": "2026-08-29T12:19:04+00:00"
+}
