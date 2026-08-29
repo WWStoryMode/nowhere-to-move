@@ -30,13 +30,23 @@ export default function TableView({ onSelect }) {
     : type === 'signed' ? signed(v) : v
 
   return (
-    <section className="section">
-      <h2>Every area, in numbers</h2>
-      <p className="section-lede">
-        The same figures behind the map. Counts and rates sit side by side in every row.
-        Click a column to sort, or a row to show that area on the map.
-      </p>
-      <div className="table-wrap">
+    <section className="section supporting-section">
+      <details className="supporting-disclosure">
+        <summary>
+          <span className="section-kicker">Supporting detail</span>
+          <span className="disclosure-title">Every area, in numbers</span>
+          <span className="disclosure-summary">
+            The full underlying table for all {areas.length} comparable areas, with
+            overcrowding counts and rates shown together.
+          </span>
+          <span className="disclosure-action">Explore all {areas.length} areas</span>
+        </summary>
+        <div className="disclosure-content">
+          <p className="section-lede">
+            These are the same figures behind the map. Click a column to sort, or select a
+            row to return to that area on the map.
+          </p>
+          <div className="table-wrap">
         <table className="data-table">
           <thead>
             <tr>
@@ -64,7 +74,12 @@ export default function TableView({ onSelect }) {
           <tbody>
             {rows.map((r) => (
               <tr key={r.code} onClick={() => onSelect(r.code)} tabIndex={0}
-                  onKeyDown={(e) => e.key === 'Enter' && onSelect(r.code)}>
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault()
+                      onSelect(r.code)
+                    }
+                  }}>
                 {COLS.map((c, i) => (
                   <td key={c.key + i} className={
                     // Only overcrowding deltas are polar. totalChange stays neutral.
@@ -79,11 +94,13 @@ export default function TableView({ onSelect }) {
             ))}
           </tbody>
         </table>
-      </div>
-      <p className="table-note">
-        Colour on “Households change” is neutral — more households is neither good nor bad
-        in itself. On the overcrowding columns, red marks a worsening and blue an improvement.
-      </p>
+          </div>
+          <p className="table-note">
+            Colour on “Households change” is neutral — more households is neither good nor bad
+            in itself. On the overcrowding columns, red marks a worsening and blue an improvement.
+          </p>
+        </div>
+      </details>
     </section>
   )
 }
