@@ -86,5 +86,21 @@
     "cached": true,
     "file": "data/raw/msoa21_bgc_lewisham.geojson",
     "bytes": 88230
+  },
+  {
+    "source": "HoC Library MSOA names, 2021 vintage",
+    "url": "https://houseofcommonslibrary.github.io/msoanames/MSOA-Names-Latest2.csv",
+    "retrieved": "2026-08-29T12:52:23+00:00",
+    "cached": false,
+    "file": "data/raw/MSOA-Names-Latest2.csv",
+    "bytes": 663408
+  },
+  {
+    "source": "HoC Library MSOA names, 2011 vintage",
+    "url": "https://houseofcommonslibrary.github.io/msoanames/MSOA-Names-Latest.csv",
+    "retrieved": "2026-08-29T12:52:23+00:00",
+    "cached": false,
+    "file": "data/raw/MSOA-Names-Latest.csv",
+    "bytes": 541703
   }
 ]

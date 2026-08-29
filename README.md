@@ -78,12 +78,66 @@ Two outputs are produced as a result:
   cannot distinguish these, because they count households in an area, not the
   same households over time.
 
+## The page
+
+A single-page Vite + React choropleth of overcrowding by MSOA.
+
+```bash
+nvm use                 # Node 20.20.2 - the system Node 14 is too old for Vite
+npm install
+npm run dev             # local development
+npm run build           # -> dist/index.html
+```
+
+`npm run build` emits **one self-contained `dist/index.html`** (~490 KB). Every
+asset and both data files are inlined, so it opens offline straight from the
+filesystem — double-click it, or AirDrop it to a phone. It makes no network
+requests at all: there is no `fetch`, no `XMLHttpRequest`, and no basemap tile
+layer.
+
+Three map views, with the count-change view leading and set as the default,
+because it is the one that carries the argument:
+
+1. **Change in overcrowded households** (count) — diverging red/blue
+2. **Change in overcrowding rate** (percentage points) — diverging red/blue
+3. **2021 overcrowding rate** — sequential red, since higher always means worse
+
+Counts and rates always appear together — in the header, the legend, every map
+tooltip, the side panel and every table row. A rate quoted alone reverses the
+story, so the page never shows one.
+
+The colour scales are colourblind-safe by measurement, not by eye: the red arm
+is derived in OKLCH at the blue ramp's exact lightness steps, and adjacent-step
+CVD separation measures 13.9 (light) and 17.8 (dark) against a floor of 8.
+
+`#view=<id>&area=<msoa21cd>` deep-links a specific area, so a link can point at
+one neighbourhood's figures.
+
+### Development annotations
+
+`data/developments.json` is an optional overlay, empty (`{}`) by default. Keyed
+by the area code used in the like-for-like table:
+
+```json
+{
+  "E02000653": [
+    { "name": "", "year": 2024, "homes": 0, "note": "", "source_url": "https://…" }
+  ]
+}
+```
+
+Only entries with a non-empty `source_url` are ever rendered, and each one shows
+its source as a link. An empty, missing or malformed file renders nothing at all
+— no heading, no placeholder. Because data is inlined at build time, filling this
+in requires re-running `npm run build`.
+
 ## Running the data fetch
 
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install requests pandas
-.venv/bin/python fetch_data.py
+.venv/bin/python fetch_data.py     # census tables, boundaries, lookup
+.venv/bin/python fetch_names.py    # House of Commons Library MSOA names
 ```
 
 Raw downloads are cached to `data/raw/`, so reruns do not re-hit the APIs.
