@@ -102,5 +102,23 @@
     "cached": false,
     "file": "data/raw/MSOA-Names-Latest.csv",
     "bytes": 541703
+  },
+  {
+    "id": "ons_pipr",
+    "source": "ONS Price Index of Private Rents (PIPR), Lewisham average monthly rents by bedroom count",
+    "url": null,
+    "verification_required": true,
+    "note": "Source URL was not included in the supplied CSV or existing repository documentation; verify and add the exact ONS source URL before publication.",
+    "file": "data/raw/lewisham_pipr_monthly_by_bedroom.csv",
+    "coverage": "2015-01 to 2026-07; only complete calendar years 2015-2025 are published"
+  },
+  {
+    "id": "ashe_resident_earnings",
+    "source": "ASHE resident-based median gross annual earnings for full-time workers, Lewisham",
+    "url": null,
+    "verification_required": true,
+    "note": "Source URL was not included in the supplied CSV or existing repository documentation; verify and add the exact ASHE source URL before publication.",
+    "file": "data/raw/lewisham_ashe_annual_earnings.csv",
+    "coverage": "2015-2025"
   }
 ]

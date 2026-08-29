@@ -4,6 +4,7 @@ import lflCsv from '../../data/lewisham_overcrowding_like_for_like.csv?raw'
 import geojsonRaw from '../../data/lewisham_msoa.geojson?raw'
 import names from '../../data/msoa_names.json'
 import developmentsRaw from '../../data/developments.json'
+import accessToSpaceRaw from '../../data/access_to_space.json'
 import provenance from '../../data/provenance.json'
 
 function parseCsv(text) {
@@ -173,3 +174,58 @@ export const gainedLost = {
   ocRose: areas.filter((a) => a.countChange > 0).length,
   ocFell: areas.filter((a) => a.countChange < 0).length,
 }
+
+const ACCESS_YEARS = Array.from({ length: 11 }, (_, i) => 2015 + i)
+const ACCESS_STEPS = {
+  '1_to_2': '1→2 bedrooms',
+  '2_to_3': '2→3 bedrooms',
+  '3_to_4plus': '3→4+ bedrooms',
+}
+
+/**
+ * Annual rent-step and earnings series, derived at build time by
+ * build_access_to_space.py. Validate again at the application boundary so a
+ * hand-edited or stale JSON file cannot quietly reach a future visualisation.
+ */
+export const accessToSpace = (() => {
+  const rows = accessToSpaceRaw?.annual
+  if (!Array.isArray(rows)) throw new Error('access to space: annual must be an array')
+  if (rows.length !== ACCESS_YEARS.length) {
+    throw new Error(`access to space: expected ${ACCESS_YEARS.length} annual rows, got ${rows.length}`)
+  }
+
+  rows.forEach((row, index) => {
+    const expectedYear = ACCESS_YEARS[index]
+    if (row?.year !== expectedYear) {
+      throw new Error(`access to space: expected year ${expectedYear} at row ${index}`)
+    }
+    if (row.months !== 12) {
+      throw new Error(`access to space: ${row.year} does not contain 12 published months`)
+    }
+    const earnings = Number(row.median_annual_gross_earnings_gbp)
+    if (!Number.isFinite(earnings) || earnings <= 0) {
+      throw new Error(`access to space: ${row.year} earnings are missing or zero`)
+    }
+
+    for (const [key, label] of Object.entries(ACCESS_STEPS)) {
+      const step = row.steps?.[key]
+      if (!step || step.label !== label) {
+        throw new Error(`access to space: ${row.year} ${key} is missing or mislabelled`)
+      }
+      const monthly = Number(step.mean_monthly_additional_rent_gbp)
+      const annual = Number(step.annual_additional_rent_gbp)
+      const percentage = Number(step.percentage_of_earnings)
+      if (![monthly, annual, percentage].every(Number.isFinite)) {
+        throw new Error(`access to space: ${row.year} ${label} contains non-finite values`)
+      }
+      if (Math.abs(monthly * 12 - annual) > 0.01) {
+        throw new Error(`access to space: ${row.year} ${label} annual rent arithmetic is inconsistent`)
+      }
+      if (Math.abs((annual / earnings) * 100 - percentage) > 0.000001) {
+        throw new Error(`access to space: ${row.year} ${label} percentage is inconsistent`)
+      }
+    }
+  })
+
+  return { meta: accessToSpaceRaw._meta, annual: rows }
+})()
