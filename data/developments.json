@@ -1,1 +1,2676 @@
-{}
+{
+  "_summary": {
+    "scope": "Lewisham schemes of 20+ homes with a completion date between 01/01/2011 and 31/12/2021, from the GLA Planning London Datahub.",
+    "source": "https://planningdata.london.gov.uk/api-guest/applications/_search",
+    "retrieved": "2026-08-29T13:44:29Z",
+    "schemes": 99,
+    "homes_gained": 9895,
+    "affordable_homes": 3369,
+    "affordable_pct": 34.0,
+    "bedrooms": {
+      "1": 4147,
+      "2": 4262,
+      "3": 1240,
+      "4": 238,
+      "5plus": 8,
+      "unknown": 0
+    },
+    "bedrooms_affordable": {
+      "1": 1130,
+      "2": 1410,
+      "3": 637,
+      "4": 184,
+      "5plus": 8,
+      "unknown": 0
+    },
+    "one_or_two_bed": 8409,
+    "one_or_two_bed_pct": 85.0,
+    "three_plus_bed": 1486,
+    "three_plus_bed_pct": 15.0,
+    "three_plus_bed_affordable": 829,
+    "caveats": [
+      "STUDIOS CANNOT BE SEPARATED FROM 1-BEDS. No unit in the Lewisham data carries a zero bedroom count (0 of 9,947 rows), yet at least one scheme description lists studio apartments. The '1' category means one-bed-or-studio.",
+      "Figures are homes GAINED. Demolitions are recorded inconsistently and carry no bedroom count, so these are not net figures.",
+      "The datahub is self-reported by boroughs and applicants and is explicitly not quality-checked on receipt by the GLA.",
+      "affordable_pct is per planning record, not per scheme. Phased developments appear as several records with very different shares - see Catford Green.",
+      "Homes counted here must not be reconciled against census household change: they are gross gains on completed applications, on a different basis."
+    ]
+  },
+  "E02000653": [
+    {
+      "name": "Cannon Wharf Business Centre, 35 Evelyn Street",
+      "completed": "01/03/2017",
+      "homes": 679,
+      "affordable_homes": 117,
+      "affordable_pct": 17.2,
+      "bedrooms": {
+        "1": 265,
+        "2": 217,
+        "3": 186,
+        "4": 7,
+        "5plus": 4,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 30,
+        "2": 48,
+        "3": 28,
+        "4": 7,
+        "5plus": 4,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC08_68523",
+      "confidence": "medium",
+      "note": "Planning ref DC08/68523. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC08_68523"
+    },
+    {
+      "name": "Marine Wharf West Plough Way",
+      "completed": "01/05/2017",
+      "homes": 532,
+      "affordable_homes": 103,
+      "affordable_pct": 19.4,
+      "bedrooms": {
+        "1": 197,
+        "2": 252,
+        "3": 74,
+        "4": 9,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 40,
+        "2": 57,
+        "3": 6,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_73437",
+      "confidence": "medium",
+      "note": "Planning ref DC10/73437. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_73437"
+    },
+    {
+      "name": "Marine Wharf East, Land on The South Side of Plough Way",
+      "completed": "01/10/2018",
+      "homes": 225,
+      "affordable_homes": 40,
+      "affordable_pct": 17.8,
+      "bedrooms": {
+        "1": 102,
+        "2": 79,
+        "3": 40,
+        "4": 4,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 0,
+        "3": 36,
+        "4": 4,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_091087",
+      "confidence": "medium",
+      "note": "Planning ref DC15/091087. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_091087"
+    },
+    {
+      "name": "SILWOOD ESTATE REGENERATION Phase 4c SILWOOD STREET",
+      "completed": "05/07/2012",
+      "homes": 146,
+      "affordable_homes": 146,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 30,
+        "2": 85,
+        "3": 23,
+        "4": 8,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 30,
+        "2": 85,
+        "3": 23,
+        "4": 8,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_73169",
+      "confidence": "medium",
+      "note": "Planning ref DC09/73169. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_73169"
+    },
+    {
+      "name": "50-52 Trundley's Road",
+      "completed": "17/09/2012",
+      "homes": 138,
+      "affordable_homes": 0,
+      "affordable_pct": 0.0,
+      "bedrooms": {
+        "1": 126,
+        "2": 12,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC11_078342",
+      "confidence": "medium",
+      "note": "88 existing home(s) recorded as lost on this site; the datahub records no bedroom count for losses, so figures here are homes gained, not net. Planning ref DC11/078342. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC11_078342"
+    },
+    {
+      "name": "50-52 Trundleys Road",
+      "completed": "01/09/2011",
+      "homes": 88,
+      "affordable_homes": 0,
+      "affordable_pct": 0.0,
+      "bedrooms": {
+        "1": 85,
+        "2": 2,
+        "3": 1,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC04_57494",
+      "confidence": "medium",
+      "note": "Planning ref DC04/57494. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC04_57494"
+    },
+    {
+      "name": "19 Yeoman Street",
+      "completed": "31/03/2020",
+      "homes": 72,
+      "affordable_homes": 12,
+      "affordable_pct": 16.7,
+      "bedrooms": {
+        "1": 30,
+        "2": 30,
+        "3": 12,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 1,
+        "2": 6,
+        "3": 5,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC16_098132",
+      "confidence": "medium",
+      "note": "Planning ref DC16/098132. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC16_098132"
+    },
+    {
+      "name": "Plough Way",
+      "completed": "01/05/2017",
+      "homes": 34,
+      "affordable_homes": 0,
+      "affordable_pct": 0.0,
+      "bedrooms": {
+        "1": 17,
+        "2": 12,
+        "3": 5,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_089436",
+      "confidence": "medium",
+      "note": "Planning ref DC14/089436. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_089436"
+    },
+    {
+      "name": "7-17 Yeoman Street",
+      "completed": "10/02/2015",
+      "homes": 33,
+      "affordable_homes": 7,
+      "affordable_pct": 21.2,
+      "bedrooms": {
+        "1": 8,
+        "2": 20,
+        "3": 5,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 3,
+        "2": 3,
+        "3": 1,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC11_77408",
+      "confidence": "medium",
+      "note": "Planning ref DC11/77408. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC11_77408"
+    },
+    {
+      "name": "54 Trundley's Road",
+      "completed": "19/01/2016",
+      "homes": 27,
+      "affordable_homes": 5,
+      "affordable_pct": 18.5,
+      "bedrooms": {
+        "1": 2,
+        "2": 22,
+        "3": 3,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 2,
+        "2": 1,
+        "3": 2,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_088613",
+      "confidence": "medium",
+      "note": "Planning ref DC14/088613. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_088613"
+    }
+  ],
+  "E02000654": [
+    {
+      "name": "Arklow Trading Estate Arklow Road",
+      "completed": "28/02/2020",
+      "homes": 316,
+      "affordable_homes": 40,
+      "affordable_pct": 12.7,
+      "bedrooms": {
+        "1": 151,
+        "2": 130,
+        "3": 35,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 18,
+        "2": 14,
+        "3": 8,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_093101",
+      "confidence": "medium",
+      "note": "Planning ref DC15/093101. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_093101"
+    },
+    {
+      "name": "S R House Childers Street",
+      "completed": "15/12/2016",
+      "homes": 83,
+      "affordable_homes": 0,
+      "affordable_pct": 0.0,
+      "bedrooms": {
+        "1": 25,
+        "2": 48,
+        "3": 10,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_086930",
+      "confidence": "medium",
+      "note": "Planning ref DC14/086930. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_086930"
+    },
+    {
+      "name": "Astra House, 23 - 25 ARKLOW ROAD",
+      "completed": "20/04/2018",
+      "homes": 44,
+      "affordable_homes": 32,
+      "affordable_pct": 72.7,
+      "bedrooms": {
+        "1": 34,
+        "2": 10,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 22,
+        "2": 10,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_089678",
+      "confidence": "medium",
+      "note": "Planning ref DC14/089678. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_089678"
+    },
+    {
+      "name": "Astra House, 23-25 Arklow Road, London, Se14 6eb",
+      "completed": "31/03/2021",
+      "homes": 44,
+      "affordable_homes": 0,
+      "affordable_pct": 0.0,
+      "bedrooms": {
+        "1": 44,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC_19_110854",
+      "confidence": "medium",
+      "note": "Planning ref DC/19/110854. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC_19_110854"
+    },
+    {
+      "name": "Malbor Hse, 130 Gosterwood Street",
+      "completed": "15/02/2012",
+      "homes": 38,
+      "affordable_homes": 38,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 12,
+        "2": 23,
+        "3": 3,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 12,
+        "2": 23,
+        "3": 3,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC08_69163",
+      "confidence": "medium",
+      "note": "Planning ref DC08/69163. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC08_69163"
+    },
+    {
+      "name": "'Pride of Deptford', 73-79 CHILDERS STREET",
+      "completed": "31/10/2012",
+      "homes": 22,
+      "affordable_homes": 22,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 1,
+        "2": 14,
+        "3": 7,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 1,
+        "2": 14,
+        "3": 7,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_75280",
+      "confidence": "medium",
+      "note": "Planning ref DC10/75280. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_75280"
+    }
+  ],
+  "E02000655": [
+    {
+      "name": "Kender Triangle Phase 4 Queens Road",
+      "completed": "27/03/2015",
+      "homes": 204,
+      "affordable_homes": 150,
+      "affordable_pct": 73.5,
+      "bedrooms": {
+        "1": 44,
+        "2": 90,
+        "3": 51,
+        "4": 19,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 26,
+        "2": 54,
+        "3": 51,
+        "4": 19,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC12_79828",
+      "confidence": "medium",
+      "note": "Planning ref DC12/79828. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC12_79828"
+    },
+    {
+      "name": "Part Former New Cross Hospital Site Wardalls Grove",
+      "completed": "27/07/2012",
+      "homes": 124,
+      "affordable_homes": 37,
+      "affordable_pct": 29.8,
+      "bedrooms": {
+        "1": 35,
+        "2": 64,
+        "3": 11,
+        "4": 14,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 6,
+        "2": 6,
+        "3": 11,
+        "4": 14,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_75036",
+      "confidence": "medium",
+      "note": "Planning ref DC10/75036. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_75036"
+    },
+    {
+      "name": "Site of Former Clifton Medical Centre, 23-27 Clifton Rise & Batavia Road",
+      "completed": "30/11/2015",
+      "homes": 114,
+      "affordable_homes": 13,
+      "affordable_pct": 11.4,
+      "bedrooms": {
+        "1": 25,
+        "2": 66,
+        "3": 23,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 4,
+        "2": 4,
+        "3": 5,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC11_77530",
+      "confidence": "medium",
+      "note": "Planning ref DC11/77530. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC11_77530"
+    },
+    {
+      "name": "Bond House Goodwood Road",
+      "completed": "31/03/2020",
+      "homes": 89,
+      "affordable_homes": 12,
+      "affordable_pct": 13.5,
+      "bedrooms": {
+        "1": 33,
+        "2": 46,
+        "3": 7,
+        "4": 3,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 6,
+        "3": 3,
+        "4": 3,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_090267",
+      "confidence": "medium",
+      "note": "Planning ref DC14/090267. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_090267"
+    },
+    {
+      "name": "Antony (1-20) and Edward Robinson (1-24) Houses Reaston Street",
+      "completed": "03/05/2011",
+      "homes": 67,
+      "affordable_homes": 67,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 28,
+        "2": 28,
+        "3": 9,
+        "4": 2,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 28,
+        "2": 28,
+        "3": 9,
+        "4": 2,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC07_65684",
+      "confidence": "medium",
+      "note": "44 existing home(s) recorded as lost on this site; the datahub records no bedroom count for losses, so figures here are homes gained, not net. Planning ref DC07/65684. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC07_65684"
+    }
+  ],
+  "E02000657": [
+    {
+      "name": "Site of Seager Buildings & Norfolk House Brookmill Road",
+      "completed": "02/07/2013",
+      "homes": 310,
+      "affordable_homes": 96,
+      "affordable_pct": 31.0,
+      "bedrooms": {
+        "1": 194,
+        "2": 66,
+        "3": 45,
+        "4": 5,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 60,
+        "2": 16,
+        "3": 16,
+        "4": 4,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC08_69448",
+      "confidence": "medium",
+      "note": "37 existing home(s) recorded as lost on this site; the datahub records no bedroom count for losses, so figures here are homes gained, not net. Planning ref DC08/69448. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC08_69448"
+    },
+    {
+      "name": "120, 122a & 136 TANNERS HILL",
+      "completed": "01/07/2016",
+      "homes": 58,
+      "affordable_homes": 15,
+      "affordable_pct": 25.9,
+      "bedrooms": {
+        "1": 9,
+        "2": 38,
+        "3": 11,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 6,
+        "2": 3,
+        "3": 6,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC13_084686",
+      "confidence": "medium",
+      "note": "Planning ref DC13/084686. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC13_084686"
+    }
+  ],
+  "E02000658": [
+    {
+      "name": "43-49 Pomeroy Street",
+      "completed": "31/03/2020",
+      "homes": 65,
+      "affordable_homes": 20,
+      "affordable_pct": 30.8,
+      "bedrooms": {
+        "1": 28,
+        "2": 19,
+        "3": 18,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 10,
+        "2": 8,
+        "3": 2,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_093731",
+      "confidence": "medium",
+      "note": "Planning ref DC15/093731. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_093731"
+    },
+    {
+      "name": "29 Pomeroy Street",
+      "completed": "08/11/2017",
+      "homes": 37,
+      "affordable_homes": 7,
+      "affordable_pct": 18.9,
+      "bedrooms": {
+        "1": 17,
+        "2": 15,
+        "3": 5,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 4,
+        "3": 3,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_091987",
+      "confidence": "medium",
+      "note": "Planning ref DC15/091987. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_091987"
+    }
+  ],
+  "E02000659": [
+    {
+      "name": "Heathside and Lethbridge Estates, phase 4",
+      "completed": "10/11/2018",
+      "homes": 236,
+      "affordable_homes": 121,
+      "affordable_pct": 51.3,
+      "bedrooms": {
+        "1": 87,
+        "2": 81,
+        "3": 54,
+        "4": 14,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 36,
+        "2": 35,
+        "3": 36,
+        "4": 14,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://lewisham.gov.uk/inmyarea/regeneration/lewishamtowncentre/heathside-and-lethbridge",
+      "confidence": "medium",
+      "note": "Estate regeneration with Family Mosaic (now Peabody). The linked council page confirms the scheme and partner but its totals are stale and not phase-specific, so the phase-4 figures rest on the datahub. Planning ref DC14/087333. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_087333"
+    },
+    {
+      "name": "Heathside and Lethbridge Estates, phase 3",
+      "completed": "01/08/2016",
+      "homes": 218,
+      "affordable_homes": 106,
+      "affordable_pct": 48.6,
+      "bedrooms": {
+        "1": 54,
+        "2": 117,
+        "3": 39,
+        "4": 8,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 19,
+        "2": 53,
+        "3": 26,
+        "4": 8,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://lewisham.gov.uk/inmyarea/regeneration/lewishamtowncentre/heathside-and-lethbridge",
+      "confidence": "medium",
+      "note": "Estate regeneration with Family Mosaic (now Peabody). Published accounts of phase 3 give 218 homes including 102 for social rent, matching the datahub's 218 units at 48.6% affordable. The linked council page confirms the scheme and partner but its totals are stale and not phase-specific. Planning ref DC12/081169. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC12_081169"
+    },
+    {
+      "name": "Heathside and Lethbridge Estates phase 2 (block G) Blackheath Hill",
+      "completed": "10/03/2013",
+      "homes": 190,
+      "affordable_homes": 83,
+      "affordable_pct": 43.7,
+      "bedrooms": {
+        "1": 93,
+        "2": 81,
+        "3": 12,
+        "4": 4,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 51,
+        "2": 22,
+        "3": 6,
+        "4": 4,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_75536",
+      "confidence": "medium",
+      "note": "Planning ref DC10/75536. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_75536"
+    },
+    {
+      "name": "Heathside and Lethbridge Estates phase 1 Blackheath Hill",
+      "completed": "22/10/2012",
+      "homes": 138,
+      "affordable_homes": 89,
+      "affordable_pct": 64.5,
+      "bedrooms": {
+        "1": 34,
+        "2": 50,
+        "3": 42,
+        "4": 12,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 25,
+        "2": 27,
+        "3": 25,
+        "4": 12,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_72554A",
+      "confidence": "medium",
+      "note": "Planning ref DC09/72554A. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_72554A"
+    },
+    {
+      "name": "65-71 Lewisham High Street",
+      "completed": "10/12/2018",
+      "homes": 36,
+      "affordable_homes": 0,
+      "affordable_pct": 0.0,
+      "bedrooms": {
+        "1": 34,
+        "2": 2,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC17_100276",
+      "confidence": "medium",
+      "note": "Planning ref DC17/100276. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC17_100276"
+    },
+    {
+      "name": "Stephen James Bmw Garage Lee Terrace",
+      "completed": "01/07/2019",
+      "homes": 30,
+      "affordable_homes": 6,
+      "affordable_pct": 20.0,
+      "bedrooms": {
+        "1": 8,
+        "2": 9,
+        "3": 3,
+        "4": 10,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 6,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC16_095488",
+      "confidence": "medium",
+      "note": "Planning ref DC16/095488. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC16_095488"
+    },
+    {
+      "name": "167 Lewisham High Street",
+      "completed": "01/12/2018",
+      "homes": 28,
+      "affordable_homes": 5,
+      "affordable_pct": 17.9,
+      "bedrooms": {
+        "1": 8,
+        "2": 16,
+        "3": 4,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 1,
+        "3": 4,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_091914",
+      "confidence": "medium",
+      "note": "Planning ref DC15/091914. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_091914"
+    },
+    {
+      "name": "65 Lewisham High Street",
+      "completed": "01/01/2019",
+      "homes": 20,
+      "affordable_homes": 0,
+      "affordable_pct": 0.0,
+      "bedrooms": {
+        "1": 12,
+        "2": 6,
+        "3": 2,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_094039",
+      "confidence": "medium",
+      "note": "Planning ref DC15/094039. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_094039"
+    }
+  ],
+  "E02000660": [
+    {
+      "name": "180 Brockley Road",
+      "completed": "29/07/2016",
+      "homes": 25,
+      "affordable_homes": 0,
+      "affordable_pct": 0.0,
+      "bedrooms": {
+        "1": 14,
+        "2": 9,
+        "3": 2,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC12_080369",
+      "confidence": "medium",
+      "note": "Planning ref DC12/080369. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC12_080369"
+    },
+    {
+      "name": "27-35 Brookmill Road",
+      "completed": "05/05/2011",
+      "homes": 20,
+      "affordable_homes": 20,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 0,
+        "2": 8,
+        "3": 2,
+        "4": 6,
+        "5plus": 4,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 8,
+        "3": 2,
+        "4": 6,
+        "5plus": 4,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC07_66363",
+      "confidence": "medium",
+      "note": "5 existing home(s) recorded as lost on this site; the datahub records no bedroom count for losses, so figures here are homes gained, not net. Planning ref DC07/66363. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC07_66363"
+    }
+  ],
+  "E02000661": [
+    {
+      "name": "Dacre Park Estate",
+      "completed": "01/11/2018",
+      "homes": 25,
+      "affordable_homes": 25,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 6,
+        "2": 14,
+        "3": 3,
+        "4": 2,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 6,
+        "2": 14,
+        "3": 3,
+        "4": 2,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_089902",
+      "confidence": "medium",
+      "note": "Planning ref DC14/089902. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_089902"
+    }
+  ],
+  "E02000662": [
+    {
+      "name": "Martins Yard, 82a Endwell Road",
+      "completed": "30/05/2013",
+      "homes": 47,
+      "affordable_homes": 14,
+      "affordable_pct": 29.8,
+      "bedrooms": {
+        "1": 15,
+        "2": 28,
+        "3": 4,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 4,
+        "2": 8,
+        "3": 2,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC11_78896",
+      "confidence": "medium",
+      "note": "Planning ref DC11/78896. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC11_78896"
+    },
+    {
+      "name": "Bridge House, 4 Mantle Road",
+      "completed": "24/02/2011",
+      "homes": 34,
+      "affordable_homes": 12,
+      "affordable_pct": 35.3,
+      "bedrooms": {
+        "1": 16,
+        "2": 17,
+        "3": 1,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 6,
+        "2": 5,
+        "3": 1,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC07_64940",
+      "confidence": "medium",
+      "note": "Planning ref DC07/64940. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC07_64940"
+    },
+    {
+      "name": "5 St Norbert Road",
+      "completed": "27/03/2014",
+      "homes": 32,
+      "affordable_homes": 32,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 4,
+        "2": 15,
+        "3": 7,
+        "4": 6,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 4,
+        "2": 15,
+        "3": 7,
+        "4": 6,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_73341",
+      "confidence": "medium",
+      "note": "Planning ref DC10/73341. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_73341"
+    },
+    {
+      "name": "Hilton House St Norbert Road",
+      "completed": "10/08/2011",
+      "homes": 20,
+      "affordable_homes": 20,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 8,
+        "2": 12,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 8,
+        "2": 12,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC06_62940",
+      "confidence": "medium",
+      "note": "32 existing home(s) recorded as lost on this site; the datahub records no bedroom count for losses, so figures here are homes gained, not net. Planning ref DC06/62940. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC06_62940"
+    }
+  ],
+  "E02000663": [
+    {
+      "name": "87 Loampit Vale",
+      "completed": "10/01/2019",
+      "homes": 49,
+      "affordable_homes": 15,
+      "affordable_pct": 30.6,
+      "bedrooms": {
+        "1": 22,
+        "2": 17,
+        "3": 10,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 6,
+        "2": 6,
+        "3": 3,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_093403",
+      "confidence": "medium",
+      "note": "5 existing home(s) recorded as lost on this site; the datahub records no bedroom count for losses, so figures here are homes gained, not net. Planning ref DC15/093403. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_093403"
+    },
+    {
+      "name": "16A (land and garages rear of 6-24) ALGERNON ROAD",
+      "completed": "25/02/2013",
+      "homes": 34,
+      "affordable_homes": 34,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 0,
+        "2": 26,
+        "3": 2,
+        "4": 6,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 26,
+        "3": 2,
+        "4": 6,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_72782",
+      "confidence": "medium",
+      "note": "Planning ref DC09/72782. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_72782"
+    }
+  ],
+  "E02000664": [
+    {
+      "name": "Renaissance, Loampit Vale",
+      "completed": "10/12/2015",
+      "homes": 794,
+      "affordable_homes": 186,
+      "affordable_pct": 23.4,
+      "bedrooms": {
+        "1": 349,
+        "2": 357,
+        "3": 77,
+        "4": 11,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 44,
+        "2": 55,
+        "3": 76,
+        "4": 11,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Renaissance,_Lewisham",
+      "confidence": "high",
+      "note": "Wikipedia records 788 flats in 10 buildings with 'up to 186 affordable'; the datahub records 794 units of which 186 are affordable. Independent sources agree on the affordable count. Barratt Homes; Assael Architecture. Built with the Glass Mill leisure centre. Planning ref DC09/71246. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_71246"
+    },
+    {
+      "name": "Thurston Road Industrial Estate Jerrard Street",
+      "completed": "01/03/2016",
+      "homes": 415,
+      "affordable_homes": 90,
+      "affordable_pct": 21.7,
+      "bedrooms": {
+        "1": 117,
+        "2": 256,
+        "3": 42,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 2,
+        "2": 56,
+        "3": 32,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_76005",
+      "confidence": "medium",
+      "note": "Planning ref DC10/76005. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_76005"
+    },
+    {
+      "name": "Lewisham Gateway Block A Lewisham High Street",
+      "completed": "01/02/2017",
+      "homes": 193,
+      "affordable_homes": 0,
+      "affordable_pct": 0.0,
+      "bedrooms": {
+        "1": 115,
+        "2": 74,
+        "3": 4,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC13_082493",
+      "confidence": "medium",
+      "note": "Planning ref DC13/082493. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC13_082493"
+    },
+    {
+      "name": "Lewisham Gateway Site Lewisham High Street",
+      "completed": "10/12/2018",
+      "homes": 169,
+      "affordable_homes": 0,
+      "affordable_pct": 0.0,
+      "bedrooms": {
+        "1": 83,
+        "2": 82,
+        "3": 4,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_089233",
+      "confidence": "medium",
+      "note": "Planning ref DC14/089233. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_089233"
+    },
+    {
+      "name": "Riverdale House, 68 Molesworth Street",
+      "completed": "09/02/2016",
+      "homes": 137,
+      "affordable_homes": 0,
+      "affordable_pct": 0.0,
+      "bedrooms": {
+        "1": 129,
+        "2": 8,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_086564",
+      "confidence": "medium",
+      "note": "Planning ref DC14/086564. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_086564"
+    },
+    {
+      "name": "72-78 Conington Road",
+      "completed": "14/12/2011",
+      "homes": 132,
+      "affordable_homes": 33,
+      "affordable_pct": 25.0,
+      "bedrooms": {
+        "1": 76,
+        "2": 47,
+        "3": 9,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 10,
+        "2": 14,
+        "3": 9,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_72732",
+      "confidence": "medium",
+      "note": "Planning ref DC09/72732. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_72732"
+    },
+    {
+      "name": "Boones Almshouses Belmont Park",
+      "completed": "09/11/2018",
+      "homes": 88,
+      "affordable_homes": 88,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 32,
+        "2": 30,
+        "3": 18,
+        "4": 8,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 32,
+        "2": 30,
+        "3": 18,
+        "4": 8,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_74143",
+      "confidence": "medium",
+      "note": "30 existing home(s) recorded as lost on this site; the datahub records no bedroom count for losses, so figures here are homes gained, not net. Planning ref DC10/74143. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_74143"
+    },
+    {
+      "name": "Former Carpetright, Loampit Vale, London, Se13 7sn",
+      "completed": "31/03/2021",
+      "homes": 67,
+      "affordable_homes": 67,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 18,
+        "2": 31,
+        "3": 18,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 18,
+        "2": 31,
+        "3": 18,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC_19_110610",
+      "confidence": "medium",
+      "note": "Planning ref DC/19/110610. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC_19_110610"
+    },
+    {
+      "name": "72-78 Nightingale Grove",
+      "completed": "01/03/2012",
+      "homes": 62,
+      "affordable_homes": 20,
+      "affordable_pct": 32.3,
+      "bedrooms": {
+        "1": 38,
+        "2": 20,
+        "3": 4,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 12,
+        "2": 4,
+        "3": 4,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC07_65777",
+      "confidence": "medium",
+      "note": "Planning ref DC07/65777. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC07_65777"
+    },
+    {
+      "name": "52-54 Thurston Road",
+      "completed": "25/03/2015",
+      "homes": 62,
+      "affordable_homes": 12,
+      "affordable_pct": 19.4,
+      "bedrooms": {
+        "1": 28,
+        "2": 24,
+        "3": 10,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 4,
+        "2": 7,
+        "3": 1,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC11_77754",
+      "confidence": "medium",
+      "note": "Planning ref DC11/77754. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC11_77754"
+    },
+    {
+      "name": "104-120 Lee High Road",
+      "completed": "06/10/2011",
+      "homes": 57,
+      "affordable_homes": 19,
+      "affordable_pct": 33.3,
+      "bedrooms": {
+        "1": 35,
+        "2": 20,
+        "3": 2,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 11,
+        "2": 8,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC08_68207",
+      "confidence": "medium",
+      "note": "Planning ref DC08/68207. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC08_68207"
+    },
+    {
+      "name": "Land to North West of Sherwood Court THURSTON ROAD",
+      "completed": "19/08/2016",
+      "homes": 56,
+      "affordable_homes": 12,
+      "affordable_pct": 21.4,
+      "bedrooms": {
+        "1": 13,
+        "2": 31,
+        "3": 12,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 6,
+        "2": 4,
+        "3": 2,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_088367",
+      "confidence": "medium",
+      "note": "Planning ref DC14/088367. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_088367"
+    },
+    {
+      "name": "Land rear of Chiddingstone House LEWISHAM PARK",
+      "completed": "31/03/2020",
+      "homes": 53,
+      "affordable_homes": 53,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 47,
+        "2": 6,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 47,
+        "2": 6,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC16_099284",
+      "confidence": "medium",
+      "note": "Planning ref DC16/099284. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC16_099284"
+    },
+    {
+      "name": "23 Mercia Grove, 31-41 Lewis Grove",
+      "completed": "20/08/2018",
+      "homes": 31,
+      "affordable_homes": 0,
+      "affordable_pct": 0.0,
+      "bedrooms": {
+        "1": 31,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC_17_101161",
+      "confidence": "medium",
+      "note": "Planning ref DC/17/101161. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC_17_101161"
+    },
+    {
+      "name": "Spring Gardens Arlington Close",
+      "completed": "31/03/2020",
+      "homes": 28,
+      "affordable_homes": 0,
+      "affordable_pct": 0.0,
+      "bedrooms": {
+        "1": 28,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC17_102175",
+      "confidence": "medium",
+      "note": "Planning ref DC17/102175. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC17_102175"
+    },
+    {
+      "name": "Mercator Road",
+      "completed": "17/03/2016",
+      "homes": 26,
+      "affordable_homes": 26,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 25,
+        "2": 1,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 25,
+        "2": 1,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_086354",
+      "confidence": "medium",
+      "note": "Planning ref DC14/086354. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_086354"
+    },
+    {
+      "name": "68 Molesworth Street",
+      "completed": "01/04/2018",
+      "homes": 25,
+      "affordable_homes": 2,
+      "affordable_pct": 8.0,
+      "bedrooms": {
+        "1": 14,
+        "2": 7,
+        "3": 4,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 0,
+        "3": 2,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_091069",
+      "confidence": "medium",
+      "note": "Planning ref DC15/091069. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_091069"
+    },
+    {
+      "name": "261 Lewisham High Street",
+      "completed": "01/08/2016",
+      "homes": 24,
+      "affordable_homes": 24,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 0,
+        "2": 24,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 24,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_090792",
+      "confidence": "medium",
+      "note": "Planning ref DC15/090792. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_090792"
+    },
+    {
+      "name": "Phase 2, ENNERSDALE HOUSE (formerly Spur Hse), 1 ARLINGTON CLOSE",
+      "completed": "22/11/2011",
+      "homes": 24,
+      "affordable_homes": 24,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 24,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 24,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_73428",
+      "confidence": "medium",
+      "note": "Planning ref DC10/73428. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_73428"
+    },
+    {
+      "name": "36-56 Lee High Road",
+      "completed": "01/04/2016",
+      "homes": 22,
+      "affordable_homes": 22,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 4,
+        "2": 18,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 4,
+        "2": 18,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC06_62788",
+      "confidence": "medium",
+      "note": "Planning ref DC06/62788. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC06_62788"
+    }
+  ],
+  "E02000665": [
+    {
+      "name": "9 Staplehurst Road",
+      "completed": "02/05/2013",
+      "homes": 51,
+      "affordable_homes": 12,
+      "affordable_pct": 23.5,
+      "bedrooms": {
+        "1": 12,
+        "2": 28,
+        "3": 11,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 12,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_73783",
+      "confidence": "medium",
+      "note": "Planning ref DC10/73783. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_73783"
+    }
+  ],
+  "E02000666": [],
+  "E02000667": [],
+  "E02000668": [],
+  "E02000669": [
+    {
+      "name": "78 Nightingale Grove",
+      "completed": "01/05/2016",
+      "homes": 43,
+      "affordable_homes": 6,
+      "affordable_pct": 14.0,
+      "bedrooms": {
+        "1": 11,
+        "2": 19,
+        "3": 13,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 2,
+        "3": 4,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC13_085721",
+      "confidence": "medium",
+      "note": "Planning ref DC13/085721. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC13_085721"
+    },
+    {
+      "name": "Old Station Yard Springbank Road",
+      "completed": "29/10/2014",
+      "homes": 32,
+      "affordable_homes": 16,
+      "affordable_pct": 50.0,
+      "bedrooms": {
+        "1": 4,
+        "2": 20,
+        "3": 8,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 4,
+        "2": 6,
+        "3": 6,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_75911",
+      "confidence": "medium",
+      "note": "Planning ref DC10/75911. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_75911"
+    }
+  ],
+  "E02000670": [
+    {
+      "name": "2-36 Plassy Road",
+      "completed": "11/01/2011",
+      "homes": 60,
+      "affordable_homes": 25,
+      "affordable_pct": 41.7,
+      "bedrooms": {
+        "1": 21,
+        "2": 24,
+        "3": 15,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 9,
+        "2": 10,
+        "3": 6,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC08_68063",
+      "confidence": "medium",
+      "note": "18 existing home(s) recorded as lost on this site; the datahub records no bedroom count for losses, so figures here are homes gained, not net. Planning ref DC08/68063. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC08_68063"
+    },
+    {
+      "name": "The George P.h. 1 Rushey Green",
+      "completed": "10/08/2011",
+      "homes": 33,
+      "affordable_homes": 13,
+      "affordable_pct": 39.4,
+      "bedrooms": {
+        "1": 22,
+        "2": 8,
+        "3": 2,
+        "4": 1,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 6,
+        "2": 4,
+        "3": 2,
+        "4": 1,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_72635",
+      "confidence": "medium",
+      "note": "Planning ref DC09/72635. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_72635"
+    }
+  ],
+  "E02000671": [],
+  "E02000672": [
+    {
+      "name": "Catford Green (former Catford Greyhound Stadium)",
+      "completed": "01/06/2018",
+      "homes": 414,
+      "affordable_homes": 295,
+      "affordable_pct": 71.3,
+      "bedrooms": {
+        "1": 152,
+        "2": 234,
+        "3": 11,
+        "4": 17,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 110,
+        "2": 157,
+        "3": 11,
+        "4": 17,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://hdawards.org/scheme/catford-green/",
+      "confidence": "low",
+      "note": "AFFORDABLE FIGURE DISPUTED - please verify. This datahub record covers 414 of the scheme's ~589 units and reports 71.3% affordable; a second record (DC15/093128, 179 units) reports 7.8%. Combined that is 593 units at 52.1%. The Housing Design Awards page states '71% Market sale, 29% Affordable' for Catford Green as a whole, which contradicts the datahub. Barratt London; Witherford Watson Mann; completion 01/2018. Planning ref DC07/67276. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC07_67276"
+    },
+    {
+      "name": "Catford Green, later phase (former Catford Greyhound Stadium)",
+      "completed": "27/05/2016",
+      "homes": 179,
+      "affordable_homes": 14,
+      "affordable_pct": 7.8,
+      "bedrooms": {
+        "1": 67,
+        "2": 96,
+        "3": 15,
+        "4": 1,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 4,
+        "2": 4,
+        "3": 5,
+        "4": 1,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://hdawards.org/scheme/catford-green/",
+      "confidence": "low",
+      "note": "Second datahub record for Catford Green - see DC07/67276. Its own description lists '4x studio apartments' yet records no zero-bedroom units, which is the clearest evidence that studios are counted as 1-bed. Planning ref DC15/093128. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_093128"
+    },
+    {
+      "name": "Site of Rising Sun P.h. 88 Rushey Green",
+      "completed": "21/11/2016",
+      "homes": 29,
+      "affordable_homes": 8,
+      "affordable_pct": 27.6,
+      "bedrooms": {
+        "1": 6,
+        "2": 14,
+        "3": 7,
+        "4": 2,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 4,
+        "3": 2,
+        "4": 2,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_74455",
+      "confidence": "medium",
+      "note": "Planning ref DC10/74455. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_74455"
+    }
+  ],
+  "E02000673": [
+    {
+      "name": "Land Rear of 15 - 17a Tyson Road",
+      "completed": "01/12/2019",
+      "homes": 71,
+      "affordable_homes": 26,
+      "affordable_pct": 36.6,
+      "bedrooms": {
+        "1": 24,
+        "2": 35,
+        "3": 12,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 8,
+        "2": 13,
+        "3": 5,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_71953",
+      "confidence": "medium",
+      "note": "3 existing home(s) recorded as lost on this site; the datahub records no bedroom count for losses, so figures here are homes gained, not net. Planning ref DC09/71953. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_71953"
+    }
+  ],
+  "E02000674": [],
+  "E02000675": [
+    {
+      "name": "Former United Dairies Depot, 2 Baring Road",
+      "completed": "31/10/2013",
+      "homes": 75,
+      "affordable_homes": 75,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 6,
+        "2": 47,
+        "3": 15,
+        "4": 7,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 6,
+        "2": 47,
+        "3": 15,
+        "4": 7,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC11_76836",
+      "confidence": "medium",
+      "note": "Planning ref DC11/76836. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC11_76836"
+    }
+  ],
+  "E02000676": [],
+  "E02000677": [
+    {
+      "name": "Phoebe's Garden Centre Penerley Road",
+      "completed": "31/03/2020",
+      "homes": 27,
+      "affordable_homes": 0,
+      "affordable_pct": 0.0,
+      "bedrooms": {
+        "1": 10,
+        "2": 10,
+        "3": 7,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC_17_102292",
+      "confidence": "medium",
+      "note": "Planning ref DC/17/102292. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC_17_102292"
+    },
+    {
+      "name": "Rushey Green Primary School, 32-34 Culverley Road",
+      "completed": "27/07/2012",
+      "homes": 24,
+      "affordable_homes": 0,
+      "affordable_pct": 0.0,
+      "bedrooms": {
+        "1": 6,
+        "2": 18,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC07_64743",
+      "confidence": "medium",
+      "note": "Planning ref DC07/64743. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC07_64743"
+    }
+  ],
+  "E02000678": [
+    {
+      "name": "Prime Cumberland Place",
+      "completed": "01/02/2011",
+      "homes": 60,
+      "affordable_homes": 0,
+      "affordable_pct": 0.0,
+      "bedrooms": {
+        "1": 52,
+        "2": 8,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC95_038648",
+      "confidence": "medium",
+      "note": "Planning ref DC95/038648. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC95_038648"
+    },
+    {
+      "name": "260 Reigate Road",
+      "completed": "01/05/2018",
+      "homes": 30,
+      "affordable_homes": 15,
+      "affordable_pct": 50.0,
+      "bedrooms": {
+        "1": 9,
+        "2": 12,
+        "3": 9,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 4,
+        "2": 7,
+        "3": 4,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_092929",
+      "confidence": "medium",
+      "note": "Planning ref DC15/092929. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_092929"
+    }
+  ],
+  "E02000679": [],
+  "E02000680": [
+    {
+      "name": "179 Dartmouth Road",
+      "completed": "01/07/2021",
+      "homes": 33,
+      "affordable_homes": 17,
+      "affordable_pct": 51.5,
+      "bedrooms": {
+        "1": 15,
+        "2": 15,
+        "3": 3,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 8,
+        "2": 6,
+        "3": 3,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_092798",
+      "confidence": "medium",
+      "note": "Planning ref DC15/092798. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_092798"
+    },
+    {
+      "name": "Fairway House, Rear of 53 Dartmouth Road",
+      "completed": "01/12/2019",
+      "homes": 27,
+      "affordable_homes": 0,
+      "affordable_pct": 0.0,
+      "bedrooms": {
+        "1": 9,
+        "2": 12,
+        "3": 6,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_090942",
+      "confidence": "medium",
+      "note": "Planning ref DC15/090942. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_090942"
+    },
+    {
+      "name": "Longfield Crescent Estate",
+      "completed": "11/10/2019",
+      "homes": 27,
+      "affordable_homes": 27,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 6,
+        "2": 8,
+        "3": 13,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 6,
+        "2": 8,
+        "3": 13,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_089888",
+      "confidence": "medium",
+      "note": "Planning ref DC14/089888. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_089888"
+    },
+    {
+      "name": "Phoenix Works Bird-in-hand Passage",
+      "completed": "16/12/2011",
+      "homes": 26,
+      "affordable_homes": 9,
+      "affordable_pct": 34.6,
+      "bedrooms": {
+        "1": 3,
+        "2": 6,
+        "3": 6,
+        "4": 11,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 4,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_73111",
+      "confidence": "medium",
+      "note": "Planning ref DC09/73111. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_73111"
+    }
+  ],
+  "E02000681": [
+    {
+      "name": "50-84 Bell Green",
+      "completed": "04/07/2012",
+      "homes": 23,
+      "affordable_homes": 23,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 4,
+        "2": 13,
+        "3": 4,
+        "4": 2,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 4,
+        "2": 13,
+        "3": 4,
+        "4": 2,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_72276",
+      "confidence": "medium",
+      "note": "9 existing home(s) recorded as lost on this site; the datahub records no bedroom count for losses, so figures here are homes gained, not net. Planning ref DC09/72276. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_72276"
+    }
+  ],
+  "E02000682": [
+    {
+      "name": "335-337 Bromley Road",
+      "completed": "15/08/2014",
+      "homes": 117,
+      "affordable_homes": 117,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 37,
+        "2": 65,
+        "3": 7,
+        "4": 8,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 37,
+        "2": 65,
+        "3": 7,
+        "4": 8,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_73135",
+      "confidence": "medium",
+      "note": "Planning ref DC09/73135. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_73135"
+    },
+    {
+      "name": "Site of Tigers Head P.h., 350-352 Bromley Road",
+      "completed": "30/01/2013",
+      "homes": 36,
+      "affordable_homes": 18,
+      "affordable_pct": 50.0,
+      "bedrooms": {
+        "1": 1,
+        "2": 29,
+        "3": 6,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 1,
+        "2": 11,
+        "3": 6,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_72980",
+      "confidence": "medium",
+      "note": "Planning ref DC09/72980. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_72980"
+    },
+    {
+      "name": "Adj to FORSTER HOUSE WHITEFOOT LANE",
+      "completed": "01/02/2019",
+      "homes": 22,
+      "affordable_homes": 22,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 9,
+        "2": 13,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 9,
+        "2": 13,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_091734",
+      "confidence": "medium",
+      "note": "1 existing home(s) recorded as lost on this site; the datahub records no bedroom count for losses, so figures here are homes gained, not net. Planning ref DC15/091734. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC15_091734"
+    }
+  ],
+  "E02000683": [],
+  "E02000685": [
+    {
+      "name": "165 Wells Park Road",
+      "completed": "08/08/2018",
+      "homes": 96,
+      "affordable_homes": 50,
+      "affordable_pct": 52.1,
+      "bedrooms": {
+        "1": 50,
+        "2": 26,
+        "3": 0,
+        "4": 20,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 50,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_090031",
+      "confidence": "medium",
+      "note": "46 existing home(s) recorded as lost on this site; the datahub records no bedroom count for losses, so figures here are homes gained, not net. Planning ref DC14/090031. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_090031"
+    },
+    {
+      "name": "Greyhound Public House 309 Kirkdale",
+      "completed": "17/11/2012",
+      "homes": 40,
+      "affordable_homes": 14,
+      "affordable_pct": 35.0,
+      "bedrooms": {
+        "1": 12,
+        "2": 11,
+        "3": 17,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 4,
+        "2": 2,
+        "3": 8,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_72790",
+      "confidence": "medium",
+      "note": "Planning ref DC09/72790. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC09_72790"
+    },
+    {
+      "name": "Willow Lodge, 11 Westwood Hill",
+      "completed": "08/09/2012",
+      "homes": 22,
+      "affordable_homes": 22,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 7,
+        "2": 12,
+        "3": 3,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 7,
+        "2": 12,
+        "3": 3,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_75996",
+      "confidence": "medium",
+      "note": "Planning ref DC10/75996. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_75996"
+    }
+  ],
+  "E02000686": [
+    {
+      "name": "Former Bell Green Gasworks Site",
+      "completed": "21/08/2012",
+      "homes": 156,
+      "affordable_homes": 55,
+      "affordable_pct": 35.3,
+      "bedrooms": {
+        "1": 36,
+        "2": 120,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 21,
+        "2": 34,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC05_58884",
+      "confidence": "medium",
+      "note": "Planning ref DC05/58884. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC05_58884"
+    },
+    {
+      "name": "1-12 Basing House & 212-218 Southend Lane",
+      "completed": "22/03/2013",
+      "homes": 44,
+      "affordable_homes": 14,
+      "affordable_pct": 31.8,
+      "bedrooms": {
+        "1": 8,
+        "2": 24,
+        "3": 4,
+        "4": 8,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 7,
+        "3": 3,
+        "4": 4,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_74206",
+      "confidence": "medium",
+      "note": "18 existing home(s) recorded as lost on this site; the datahub records no bedroom count for losses, so figures here are homes gained, not net. Planning ref DC10/74206. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC10_74206"
+    },
+    {
+      "name": "Kelvin House Worsley Bridge Road",
+      "completed": "05/11/2015",
+      "homes": 27,
+      "affordable_homes": 0,
+      "affordable_pct": 0.0,
+      "bedrooms": {
+        "1": 7,
+        "2": 20,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_088645",
+      "confidence": "medium",
+      "note": "Planning ref DC14/088645. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_088645"
+    }
+  ],
+  "E02000687": [],
+  "E02006783": [],
+  "E02006784": [
+    {
+      "name": "Hazelhurst Court Beckenham Hill Road",
+      "completed": "30/01/2016",
+      "homes": 60,
+      "affordable_homes": 60,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 58,
+        "2": 2,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 58,
+        "2": 2,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_088227",
+      "confidence": "medium",
+      "note": "Planning ref DC14/088227. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_088227"
+    }
+  ],
+  "E02006798": [
+    {
+      "name": "Creekside Village East Copperas Street",
+      "completed": "01/06/2012",
+      "homes": 226,
+      "affordable_homes": 79,
+      "affordable_pct": 35.0,
+      "bedrooms": {
+        "1": 109,
+        "2": 84,
+        "3": 33,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 37,
+        "2": 24,
+        "3": 18,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC06_063352",
+      "confidence": "medium",
+      "note": "Planning ref DC06/063352. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC06_063352"
+    },
+    {
+      "name": "Faircharm Trading Estate Creekside",
+      "completed": "31/03/2019",
+      "homes": 148,
+      "affordable_homes": 21,
+      "affordable_pct": 14.2,
+      "bedrooms": {
+        "1": 63,
+        "2": 68,
+        "3": 17,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 7,
+        "2": 13,
+        "3": 1,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC12_082000",
+      "confidence": "medium",
+      "note": "Planning ref DC12/082000. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC12_082000"
+    },
+    {
+      "name": "Kent Wharf & 24a Creekside",
+      "completed": "01/12/2017",
+      "homes": 143,
+      "affordable_homes": 18,
+      "affordable_pct": 12.6,
+      "bedrooms": {
+        "1": 48,
+        "2": 79,
+        "3": 16,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 4,
+        "2": 13,
+        "3": 1,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_089953",
+      "confidence": "medium",
+      "note": "Planning ref DC14/089953. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC14_089953"
+    },
+    {
+      "name": "Land at Octavius Street",
+      "completed": "23/02/2016",
+      "homes": 132,
+      "affordable_homes": 8,
+      "affordable_pct": 6.1,
+      "bedrooms": {
+        "1": 53,
+        "2": 76,
+        "3": 0,
+        "4": 3,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 2,
+        "2": 6,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC11_78175",
+      "confidence": "medium",
+      "note": "Planning ref DC11/78175. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC11_78175"
+    },
+    {
+      "name": "483-485 New Cross Road",
+      "completed": "20/02/2017",
+      "homes": 44,
+      "affordable_homes": 9,
+      "affordable_pct": 20.5,
+      "bedrooms": {
+        "1": 13,
+        "2": 26,
+        "3": 5,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 2,
+        "2": 3,
+        "3": 4,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC13_083322",
+      "confidence": "medium",
+      "note": "Planning ref DC13/083322. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC13_083322"
+    },
+    {
+      "name": "Giffin Street Regeneration Area",
+      "completed": "09/06/2012",
+      "homes": 38,
+      "affordable_homes": 38,
+      "affordable_pct": 100.0,
+      "bedrooms": {
+        "1": 8,
+        "2": 30,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 8,
+        "2": 30,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC08_69668",
+      "confidence": "medium",
+      "note": "Planning ref DC08/69668. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC08_69668"
+    },
+    {
+      "name": "124 Deptford High Street",
+      "completed": "17/09/2012",
+      "homes": 24,
+      "affordable_homes": 0,
+      "affordable_pct": 0.0,
+      "bedrooms": {
+        "1": 10,
+        "2": 14,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC03_55454",
+      "confidence": "medium",
+      "note": "Planning ref DC03/55454. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC03_55454"
+    },
+    {
+      "name": "489a New Cross Road",
+      "completed": "29/01/2013",
+      "homes": 20,
+      "affordable_homes": 4,
+      "affordable_pct": 20.0,
+      "bedrooms": {
+        "1": 16,
+        "2": 4,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "bedrooms_affordable": {
+        "1": 4,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5plus": 0,
+        "unknown": 0
+      },
+      "source_url": "https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC06_64454",
+      "confidence": "medium",
+      "note": "Planning ref DC06/64454. Figures counted from the datahub's unit-level records. Datahub record: https://planningdata.london.gov.uk/api-guest/applications/_doc/Lewisham-DC06_64454"
+    }
+  ],
+  "unassigned": []
+}

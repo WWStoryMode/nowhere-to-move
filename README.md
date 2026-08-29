@@ -131,6 +131,55 @@ its source as a link. An empty, missing or malformed file renders nothing at all
 — no heading, no placeholder. Because data is inlined at build time, filling this
 in requires re-running `npm run build`.
 
+## What was built, 2011–2021
+
+`data/developments.json` catalogues **99 completed schemes of 20+ homes**, from the
+GLA [Planning London Datahub](https://planningdata.london.gov.uk/api-guest/) (which
+absorbed the London Development Database). Every scheme is located by
+point-in-polygon of the datahub's own centroid against the MSOA boundaries — never
+inferred from census household growth.
+
+**9,895 homes** were gained across those schemes:
+
+| Bedrooms | Market | Affordable | Total | % |
+|---|---|---|---|---|
+| 1 (or studio) | 3,017 | 1,130 | 4,147 | 41.9% |
+| 2 | 2,852 | 1,410 | 4,262 | 43.1% |
+| 3 | 603 | 637 | 1,240 | 12.5% |
+| 4 | 54 | 184 | 238 | 2.4% |
+| 5+ | 0 | 8 | 8 | 0.1% |
+
+**85% were 1–2 bed. 15% had three or more bedrooms. 8.4% — 829 homes across a
+decade — were both family-sized and affordable.**
+
+Private-led schemes cluster at 12–23% affordable (Arklow 12.7%, Cannon Wharf 17.2%,
+Renaissance 23.4%); estate regeneration runs far higher (Kender Triangle 73.5%,
+Heathside & Lethbridge 43.7–51.3%). Nineteen schemes delivered 1,215 homes with
+**no affordable housing at all**, including Lewisham Gateway's 362 homes.
+
+Ten MSOAs have an explicit empty array — no scheme of 20+ homes completed there in
+the period. That is a finding, not a gap.
+
+### Limits of this catalogue
+
+- **Studios cannot be separated from 1-beds.** No unit record in Lewisham carries a
+  zero bedroom count (0 of 9,947), yet at least one scheme description lists studio
+  apartments. The "1" category means one-bed-or-studio.
+- Figures are homes **gained**. Demolitions are recorded inconsistently and carry no
+  bedroom count, so these are not net figures.
+- `affordable_pct` is **per planning record, not per scheme**. Phased developments
+  appear as several records with very different shares — Catford Green splits into
+  414 units at 71.3% and 179 at 7.8%, and the Housing Design Awards puts the whole
+  scheme at 29%. That conflict is unresolved and marked `confidence: low`.
+- The datahub is self-reported by boroughs and applicants and is explicitly **not
+  quality-checked on receipt** by the GLA.
+- Homes here must **not** be reconciled against census household change — they are
+  gross gains on completed applications, on a different basis entirely.
+
+Only one scheme (Renaissance) is `confidence: high`, corroborated independently.
+Most rest on the datahub alone and are marked `medium`. Every entry carries a
+resolving per-record URL.
+
 ## Running the data fetch
 
 ```bash
@@ -138,6 +187,8 @@ python3 -m venv .venv
 .venv/bin/pip install requests pandas
 .venv/bin/python fetch_data.py     # census tables, boundaries, lookup
 .venv/bin/python fetch_names.py    # House of Commons Library MSOA names
+.venv/bin/python fetch_developments.py   # GLA Planning London Datahub completions
+.venv/bin/python build_developments.py   # -> data/developments.json
 ```
 
 Raw downloads are cached to `data/raw/`, so reruns do not re-hit the APIs.
