@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import Header from './components/Header.jsx'
+import ProjectOverview from './components/ProjectOverview.jsx'
 import BedroomMix from './components/BedroomMix.jsx'
 import ViewToggle from './components/ViewToggle.jsx'
 import MapPanel from './components/MapPanel.jsx'
@@ -9,6 +10,9 @@ import HouseholdsChart from './components/HouseholdsChart.jsx'
 import TableView from './components/TableView.jsx'
 import LimitationsBox from './components/LimitationsBox.jsx'
 import Footer from './components/Footer.jsx'
+import AccessToSpace from './components/AccessToSpace.jsx'
+import CurrentCaseStudy from './components/CurrentCaseStudy.jsx'
+import MethodSection from './components/MethodSection.jsx'
 import { VIEWS } from './lib/palette.js'
 import { areas } from './lib/data.js'
 
@@ -78,6 +82,7 @@ export default function App() {
   return (
     <div className="app">
       <Header />
+      <ProjectOverview />
 
       <BedroomMix dark={dark} />
 
@@ -98,6 +103,9 @@ export default function App() {
 
       <HouseholdsChart />
       <TableView onSelect={selectFromTable} />
+      <AccessToSpace />
+      <CurrentCaseStudy />
+      <MethodSection />
       <LimitationsBox />
       <Footer />
     </div>

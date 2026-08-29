@@ -1,11 +1,40 @@
 # Nowhere to Move
 
-Evidence pack for the **Save Lewisham Shopping Centre** campaign.
+An evidence-based investigation into why household overcrowding can remain
+stubbornly high despite substantial housing development.
 
-Measures how household overcrowding changed across Lewisham between the 2011
-and 2021 censuses at MSOA level, to test whether the consented Landsec scheme
-(1,744 homes, 329 "affordable", mostly 1–2 bed) matches where family-sized need
-actually is.
+Lewisham is the initial case study. The project combines Census overcrowding
+data, the bedroom mix of completed housing development, and the cost of gaining
+an additional bedroom relative to local earnings.
+
+The longer-term aim is to build a transparent and reproducible methodology that
+can be reused across London boroughs and adapted to other English local
+authorities where comparable development data is available.
+
+The central question is:
+
+> Why can household overcrowding remain stalled despite substantial housing
+> construction, and what prevents households that need more space from moving
+> into suitably sized homes?
+
+## Project scope
+
+The investigation connects three analytical strands:
+
+1. **Overcrowding outcome.** Measure the count and rate of overcrowded households
+   in 2011 and 2021, including variation between MSOAs. Count and rate are always
+   shown together, and the analysis makes no causal claim about development.
+2. **Housing supply and bedroom mix.** Examine completed development, separating
+   total growth from three-bedroom-or-larger supply, affordable supply, and
+   affordable family-sized supply where the source data permits.
+3. **Access to additional space.** Calculate the rent required to gain another
+   bedroom and express that annual cost as a share of local annual earnings. This
+   strand is planned but its data has not yet been integrated, so no findings are
+   reported for it.
+
+The project moves beyond asking whether an area is building enough homes. It
+asks whether the housing system is producing the right kinds of homes, in forms
+that households needing additional space can realistically access.
 
 ## The headline
 
@@ -15,12 +44,40 @@ actually is.
 | All households | 116,091 | 122,390 | **+6,299** |
 | Overcrowding rate | 12.08% | 11.41% | −0.67pp |
 
-The **rate** fell only because the denominator grew. The **count** of
-overcrowded households was flat. Roughly 6,300 new households arrived and the
-number of overcrowded families did not move.
+The **rate** fell as the household denominator grew. The **count** of overcrowded
+households was essentially flat while the total household count increased by
+6,299.
 
 Rate and count must always be read together. A rate quoted alone tells the
 opposite story.
+
+These figures describe changes observed over the decade. They do not show that
+housing construction caused overcrowding to rise, fall or remain flat.
+
+## Lewisham Shopping Centre: a contemporary case study
+
+The consented Lewisham Shopping Centre redevelopment remains part of the
+project as a current example of debates about housing quantity, affordability
+and bedroom mix. It connects the historical 2011–2021 evidence with decisions
+about what is built next. It is not the purpose or political audience of the
+project, and the analysis does not claim that the scheme caused or will cause a
+particular overcrowding outcome.
+
+The repository currently records 1,744 conventional homes, including 329
+affordable homes and 98 for social rent. Its qualitative bedroom-mix description
+is not charted because verified per-unit counts are not present in the repository.
+
+## Reuse and transferability
+
+Lewisham is the first implementation of a wider analytical framework. Census,
+rent and earnings measures use national official datasets and can potentially be
+applied to other areas. The bedroom-mix component currently uses the GLA Planning
+London Datahub, so the present pipeline is especially suited to London. Outside
+London, an equivalent development dataset would need to be substituted and its
+coverage assessed.
+
+The method is designed to be reusable across London boroughs and adaptable to
+other English local authorities where comparable development data is available.
 
 ## Definitions
 
@@ -80,7 +137,9 @@ Two outputs are produced as a result:
 
 ## The page
 
-A single-page Vite + React choropleth of overcrowding by MSOA.
+A single-page Vite + React investigation combining a bedroom-mix exhibit,
+MSOA-level overcrowding maps and tables, household-growth context, the planned
+rent/earnings method, and the contemporary Lewisham Shopping Centre case study.
 
 ```bash
 nvm use                 # Node 20.20.2 - the system Node 14 is too old for Vite
@@ -89,7 +148,7 @@ npm run dev             # local development
 npm run build           # -> dist/index.html
 ```
 
-`npm run build` emits **one self-contained `dist/index.html`** (~490 KB). Every
+`npm run build` emits **one self-contained `dist/index.html`** (~565 KB). Every
 asset and both data files are inlined, so it opens offline straight from the
 filesystem — double-click it, or AirDrop it to a phone. It makes no network
 requests at all: there is no `fetch`, no `XMLHttpRequest`, and no basemap tile
@@ -113,10 +172,10 @@ CVD separation measures 13.9 (light) and 17.8 (dark) against a floor of 8.
 `#view=<id>&area=<msoa21cd>` deep-links a specific area, so a link can point at
 one neighbourhood's figures.
 
-### Development annotations
+### Development data by area
 
-`data/developments.json` is an optional overlay, empty (`{}`) by default. Keyed
-by the area code used in the like-for-like table:
+`data/developments.json` supplies the borough bedroom-mix exhibit and per-area
+development detail. It is keyed by the area code used in the like-for-like table:
 
 ```json
 {
@@ -126,10 +185,10 @@ by the area code used in the like-for-like table:
 }
 ```
 
-Only entries with a non-empty `source_url` are ever rendered, and each one shows
-its source as a link. An empty, missing or malformed file renders nothing at all
-— no heading, no placeholder. Because data is inlined at build time, filling this
-in requires re-running `npm run build`.
+Only entries with a non-empty `source_url` are rendered, and each one shows its
+source as a link. An empty area array means no qualifying completed scheme was
+recorded there; it is not treated as missing data. Because data is inlined at
+build time, updating it requires re-running `npm run build`.
 
 ## What was built, 2011–2021
 
