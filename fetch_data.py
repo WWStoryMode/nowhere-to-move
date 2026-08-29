@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Stage 1 data fetch for the Lewisham overcrowding evidence pack.
+Stage 1 data fetch for the Lewisham overcrowding case study.
 
 Downloads and joins:
   * 2021 Census TS052 "Occupancy rating for bedrooms"   (Nomis NM_2070_1)

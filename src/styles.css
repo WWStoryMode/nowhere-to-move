@@ -53,6 +53,7 @@ a { color: var(--accent); }
   color: var(--muted); margin: 0 0 14px;
 }
 .header h1 { font-size: clamp(30px, 5.6vw, 52px); font-weight: 700; margin: 0 0 18px; }
+.subtitle { font-size: clamp(21px, 3.5vw, 30px); font-weight: 650; margin: -8px 0 16px; color: var(--ink-2); }
 .standfirst {
   font-size: clamp(16px, 2.1vw, 19px); color: var(--ink-2); max-width: 68ch; margin: 0 0 30px;
 }
@@ -82,6 +83,33 @@ a { color: var(--accent); }
 .section > h2 { font-size: clamp(21px, 3vw, 27px); margin-bottom: 10px; }
 .section-lede { color: var(--ink-2); max-width: 74ch; margin: 0 0 22px; font-size: 15px; }
 .section-lede strong { color: var(--ink); }
+.section-kicker {
+  margin: 0 0 7px; color: var(--muted); font-size: 12px; font-weight: 700;
+  letter-spacing: .06em; text-transform: uppercase;
+}
+.text-section, .case-study {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--r);
+  padding: 24px; box-shadow: var(--shadow);
+}
+.text-section > p:last-child, .case-study > p:last-child { margin-bottom: 0; }
+.overview {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;
+}
+.overview-block {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--r);
+  padding: 22px 24px; box-shadow: var(--shadow);
+}
+.overview-block h2 { font-size: 20px; margin-bottom: 10px; }
+.overview-block > p:last-child { color: var(--ink-2); margin: 0; }
+.overview-block--objective { grid-column: 1 / -1; border-left: 4px solid var(--accent); }
+.overview-strands { margin: 0; padding-left: 21px; display: grid; gap: 10px; }
+.overview-strands li { padding-left: 3px; }
+.overview-strands strong, .overview-strands span { display: block; }
+.overview-strands span { color: var(--ink-2); font-size: 13.5px; margin-top: 2px; }
+.case-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 22px 0; }
+.case-stats div { background: var(--plane); border-radius: 8px; padding: 15px; display: flex; flex-direction: column; }
+.case-stats strong { font-size: 26px; font-variant-numeric: tabular-nums; }
+.case-stats span { color: var(--ink-2); font-size: 13px; }
 
 .map-head { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between; margin-bottom: 18px; }
 
@@ -216,6 +244,9 @@ a { color: var(--accent); }
   .sources div { grid-template-columns: 1fr; gap: 2px; }
   .toggle { width: 100%; flex-direction: column; }
   .toggle-btn { width: 100%; justify-content: space-between; padding: 11px 14px; }
+  .case-stats { grid-template-columns: 1fr; }
+  .overview { grid-template-columns: 1fr; }
+  .overview-block--objective { grid-column: auto; }
 }
 
 /* ---------- bedroom mix (primary panel) ---------- */

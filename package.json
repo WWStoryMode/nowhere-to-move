@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Lewisham overcrowding choropleth - Save Lewisham Shopping Centre evidence pack",
+  "description": "A reusable investigation of persistent household overcrowding, beginning with Lewisham",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
