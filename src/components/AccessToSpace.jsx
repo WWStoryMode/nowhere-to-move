@@ -211,7 +211,7 @@ export default function AccessToSpace() {
 
   return (
     <section className="section access" aria-labelledby="access-h">
-      <p className="section-kicker">Access to additional space</p>
+      <p className="section-kicker">Question 3 · Access to additional space</p>
       <h2 id="access-h">What does one more bedroom cost?</h2>
       <p className="section-lede">
         For households needing more space, the private rental market introduces another

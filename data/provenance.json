@@ -134,5 +134,20 @@
       "The earnings measure is not specific to private renters or overcrowded households.",
       "Aggregate earnings data cannot establish household behaviour."
     ]
+  },
+  {
+    "id": "lewisham_shopping_centre_consent",
+    "source": "Project record of the consented Lewisham Shopping Centre scheme",
+    "url": null,
+    "verification_required": true,
+    "note": "The repository records 1,744 conventional homes, 329 affordable homes and 98 social-rent homes, plus a qualitative bedroom-mix description. Verify these figures against an authoritative consent or planning source before treating them as externally sourced evidence.",
+    "file": "src/lib/consented.js"
+  },
+  {
+    "id": "lewisham_shopping_centre_debate",
+    "source": "Project record of positions in the Lewisham Shopping Centre public debate",
+    "url": null,
+    "verification_required": true,
+    "note": "The opening attributes concerns about affordability and family-sized housing to local campaigners and describes arguments for redevelopment around delivery, regeneration, viability and deliverability. Exact campaign, council and developer sources are not present in the repository and require human verification. These positions are not project findings."
   }
 ]

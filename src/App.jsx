@@ -88,6 +88,7 @@ export default function App() {
       <AccessToSpace />
 
       <section className="section section--map" ref={mapSectionRef}>
+        <p className="section-kicker">Where the pattern appears</p>
         <div className="map-head">
           <h2>Overcrowding by area</h2>
           <ViewToggle value={viewId} onChange={setViewId} />

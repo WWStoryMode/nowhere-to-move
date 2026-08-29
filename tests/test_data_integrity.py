@@ -147,7 +147,18 @@ class FrontendContractTests(unittest.TestCase):
     def setUpClass(cls):
         cls.app = (ROOT / "src/App.jsx").read_text()
         cls.access = (ROOT / "src/components/AccessToSpace.jsx").read_text()
+        cls.overview = (ROOT / "src/components/ProjectOverview.jsx").read_text()
+        cls.readme = (ROOT / "README.md").read_text()
         cls.styles = (ROOT / "src/styles.css").read_text()
+
+    def test_central_research_question_is_unchanged_everywhere(self):
+        question = (
+            "Why can household overcrowding remain stalled despite substantial housing "
+            "construction, and what prevents households that need more space from moving "
+            "into suitably sized homes?"
+        )
+        self.assertIn(question, self.overview)
+        self.assertIn(question, " ".join(self.readme.split()))
 
     def test_page_order_and_existing_map_contracts(self):
         markers = [
