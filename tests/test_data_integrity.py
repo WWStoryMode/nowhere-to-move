@@ -147,6 +147,9 @@ class FrontendContractTests(unittest.TestCase):
     def setUpClass(cls):
         cls.app = (ROOT / "src/App.jsx").read_text()
         cls.access = (ROOT / "src/components/AccessToSpace.jsx").read_text()
+        cls.households = (ROOT / "src/components/HouseholdsChart.jsx").read_text()
+        cls.table = (ROOT / "src/components/TableView.jsx").read_text()
+        cls.closing = (ROOT / "src/components/CurrentCaseStudy.jsx").read_text()
         cls.overview = (ROOT / "src/components/ProjectOverview.jsx").read_text()
         cls.readme = (ROOT / "README.md").read_text()
         cls.styles = (ROOT / "src/styles.css").read_text()
@@ -191,6 +194,23 @@ class FrontendContractTests(unittest.TestCase):
         self.assertIn("overflow-x: auto", self.styles)
         for variable in ("--access-12", "--access-23", "--access-34"):
             self.assertEqual(self.styles.count(variable), 2)
+
+    def test_supporting_sections_are_native_closed_disclosures(self):
+        for component in (self.households, self.table):
+            self.assertIn('<details className="supporting-disclosure">', component)
+            self.assertIn("<summary>", component)
+            self.assertNotIn("<details open", component)
+        self.assertIn("onSelect(r.code)", self.table)
+        self.assertIn("e.key === 'Enter' || e.key === ' '", self.table)
+        self.assertIn("summary:focus-visible", self.styles)
+
+    def test_closing_uses_validated_data_boundaries(self):
+        for contract in ("HEADLINE.change.households", "HEADLINE.change.overcrowded",
+                         "devSummary.one_or_two_bed_pct", "accessToSpace.annual",
+                         "CONSENTED.homes", "CONSENTED.affordable", "CONSENTED.socialRent"):
+            self.assertIn(contract, self.closing)
+        self.assertIn("does not show that housebuilding caused", self.closing)
+        self.assertIn("cannot tell us what the Shopping Centre redevelopment will do", self.closing)
 
 
 if __name__ == "__main__":
