@@ -1,6 +1,46 @@
-import { developments } from '../lib/data.js'
+import { developments, devByArea } from '../lib/data.js'
 import { narrative } from '../lib/narrative.js'
 import { n, pct2, signed, signedPp } from '../lib/format.js'
+
+// The datahub records completion as DD/MM/YYYY. The year is all we show, and a
+// malformed or absent date shows nothing rather than a guess.
+const year = (completed) => {
+  const m = /^\d{2}\/\d{2}\/(\d{4})$/.exec((completed || '').trim())
+  return m ? m[1] : null
+}
+
+const CONFIDENCE = {
+  low: { cls: 'is-low', label: 'Unconfirmed' },
+  medium: { cls: 'is-med', label: 'Datahub only' },
+  high: { cls: 'is-high', label: 'Corroborated' },
+}
+
+const SHOWN = 4
+
+function Scheme({ d }) {
+  const y = year(d.completed)
+  const c = CONFIDENCE[d.confidence] || CONFIDENCE.medium
+  return (
+    <li>
+      <span className="dev-name">{d.name}</span>
+      <span className="dev-meta">
+        {[
+          y,
+          `${n(d.homes)} homes`,
+          d.affordable_homes > 0
+            ? `${n(d.affordable_homes)} affordable (${d.affordable_pct}%)`
+            : 'no affordable homes',
+        ].filter(Boolean).join(' · ')}
+      </span>
+      <span className="dev-foot">
+        <span className={`dev-conf ${c.cls}`}>{c.label}</span>
+        <a className="dev-src" href={d.source_url} target="_blank" rel="noopener noreferrer">
+          Source
+        </a>
+      </span>
+    </li>
+  )
+}
 
 export default function AreaPanel({ area }) {
   if (!area) {
@@ -9,13 +49,16 @@ export default function AreaPanel({ area }) {
         <p className="panel-empty-title">Select an area</p>
         <p className="panel-empty-body">
           Tap any area on the map to see its overcrowded household count and rate for
-          2011 and 2021 side by side.
+          2011 and 2021 side by side, and what was built there.
         </p>
       </aside>
     )
   }
 
-  const devs = developments.get(area.code) || []
+  // Largest first, so the schemes that shaped the area lead.
+  const schemes = [...(developments.get(area.code) || [])]
+    .sort((a, b) => (b.homes || 0) - (a.homes || 0))
+  const agg = devByArea.get(area.code)
 
   return (
     <aside className="panel" aria-live="polite">
@@ -75,27 +118,52 @@ export default function AreaPanel({ area }) {
         </p>
       )}
 
-      {devs.length > 0 && (
-        <div className="panel-block panel-block--dev">
-          <h3>Development</h3>
-          <ul className="dev-list">
-            {devs.map((d, i) => (
-              <li key={i}>
-                {d.name && <span className="dev-name">{d.name}</span>}
-                {(d.year || d.homes) && (
-                  <span className="dev-meta">
-                    {[d.year, d.homes ? `${n(d.homes)} homes` : null].filter(Boolean).join(' · ')}
-                  </span>
-                )}
-                {d.note && <span className="dev-note">{d.note}</span>}
-                <a className="dev-src" href={d.source_url} target="_blank" rel="noopener noreferrer">
-                  Source
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <div className="panel-block panel-block--dev">
+        <h3>Homes built 2011–2021</h3>
+
+        {schemes.length === 0 ? (
+          // An empty array in the data file is a finding, not missing data.
+          <p className="dev-none">
+            No completed schemes of 20+ homes recorded 2011–2021.
+          </p>
+        ) : (
+          <>
+            <table className="panel-table">
+              <tbody>
+                <tr><th scope="row">Schemes</th><td>{schemes.length}</td></tr>
+                <tr><th scope="row">Homes built</th><td>{n(agg.homes)}</td></tr>
+                <tr>
+                  <th scope="row">Affordable</th>
+                  <td>{n(agg.affordable)} ({agg.affordablePct.toFixed(1)}%)</td>
+                </tr>
+                <tr>
+                  <th scope="row">1–2 bed</th>
+                  <td>{n(agg.beds12)} ({((100 * agg.beds12) / agg.homes).toFixed(0)}%)</td>
+                </tr>
+                <tr>
+                  <th scope="row">3+ bed</th>
+                  <td>{n(agg.beds3plus)} ({((100 * agg.beds3plus) / agg.homes).toFixed(0)}%)</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <ul className="dev-list">
+              {schemes.slice(0, SHOWN).map((d, i) => <Scheme key={i} d={d} />)}
+            </ul>
+
+            {schemes.length > SHOWN && (
+              <details className="dev-more">
+                <summary>
+                  {schemes.length - SHOWN} more scheme{schemes.length - SHOWN > 1 ? 's' : ''}
+                </summary>
+                <ul className="dev-list">
+                  {schemes.slice(SHOWN).map((d, i) => <Scheme key={i} d={d} />)}
+                </ul>
+              </details>
+            )}
+          </>
+        )}
+      </div>
     </aside>
   )
 }

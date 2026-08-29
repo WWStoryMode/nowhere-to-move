@@ -91,3 +91,16 @@ export function rampFor(view, dark) {
     ? SEQ_RED
     : diverging(dark ? NEUTRAL_DARK : NEUTRAL_LIGHT)
 }
+
+// Bedroom count is ORDINAL - more bedrooms, darker step - so it takes a
+// single-hue ramp, not the map's diverging red/blue (which means improved or
+// worsened elsewhere on this page and would misread as a value judgement here).
+// Both ramps pass the skill's --ordinal gates: lightness monotone, adjacent
+// dL >= 0.06, light end clears the surface, hue spread 3 degrees.
+export const BEDROOM_RAMP_LIGHT = ['#86b6ef', '#5598e7', '#2a78d6', '#1c5cab', '#104281']
+export const BEDROOM_RAMP_DARK = ['#b7d3f6', '#86b6ef', '#5598e7', '#2a78d6', '#1c5cab']
+export const BEDROOM_KEYS = ['1', '2', '3', '4', '5plus']
+export const BEDROOM_LABELS = {
+  '1': '1 bed or studio', '2': '2 bed', '3': '3 bed', '4': '4 bed', '5plus': '5+ bed',
+}
+export const bedroomRamp = (dark) => (dark ? BEDROOM_RAMP_DARK : BEDROOM_RAMP_LIGHT)
