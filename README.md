@@ -168,6 +168,7 @@ rent/earnings time series, and the contemporary Lewisham Shopping Centre case st
 nvm use                 # Node 20.20.2 - the system Node 14 is too old for Vite
 npm install
 npm run dev             # local development
+npm test                # raw-to-derived and existing-data regression checks
 npm run build           # -> dist/index.html
 ```
 

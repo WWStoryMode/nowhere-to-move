@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { accessToSpace } from '../lib/data.js'
+import { accessToSpace, provenanceById } from '../lib/data.js'
 import { n } from '../lib/format.js'
 
 const SERIES = [
@@ -184,6 +184,18 @@ function ValuesTable() {
   )
 }
 
+function Source({ id, children }) {
+  const source = provenanceById.get(id)
+  if (source?.url) {
+    return <a href={source.url} target="_blank" rel="noopener noreferrer">{children}</a>
+  }
+  return (
+    <span>
+      {children} <span className="source-unverified">(exact URL requires verification)</span>
+    </span>
+  )
+}
+
 export default function AccessToSpace() {
   const [modeId, setModeId] = useState('annual')
   const rows = Object.fromEntries(accessToSpace.annual.map((row) => [row.year, row]))
@@ -252,9 +264,10 @@ export default function AccessToSpace() {
         market and do not describe affordable housing.
       </div>
       <p className="access-source">
-        Sources: ONS Price Index of Private Rents; ASHE resident-based median gross annual
-        earnings for full-time workers. Exact source URLs require verification in the
-        project provenance before publication.
+        Sources: <Source id="ons_pipr">ONS Price Index of Private Rents (PIPR)</Source>;{' '}
+        <Source id="ashe_resident_earnings">
+          ASHE resident-based median gross annual earnings for full-time workers
+        </Source>. Source status is recorded in project provenance.
       </p>
     </section>
   )
