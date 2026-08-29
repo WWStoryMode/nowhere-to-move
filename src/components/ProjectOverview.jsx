@@ -1,47 +1,73 @@
+import { HEADLINE } from '../lib/headline.js'
+import { n, pct2 } from '../lib/format.js'
+
+export const CENTRAL_RESEARCH_QUESTION = 'Why can household overcrowding remain stalled despite substantial housing construction, and what prevents households that need more space from moving into suitably sized homes?'
+
 export default function ProjectOverview() {
+  const { y2011, y2021, change } = HEADLINE
+
   return (
-    <section className="section overview" aria-label="Project background, scope and objective">
-      <div className="overview-block">
-        <p className="section-kicker">Background</p>
-        <h2>Persistent overcrowding despite housing growth</h2>
-        <p>
-          Household overcrowding remains persistent in many parts of London even where
-          substantial residential development has taken place. Lewisham is the initial case
-          study: between 2011 and 2021 its household count increased by 6,299, while the
-          number of overcrowded households fell by only 54. The rate declined, but the count
-          was essentially flat, so both measures must be read together.
+    <section className="section investigation" aria-labelledby="research-question">
+      <div className="question-pivot">
+        <p className="section-kicker">From dispute to investigation</p>
+        <p className="question-transition">
+          We took those concerns as questions to test against Lewisham’s recent history—not
+          as conclusions.
+        </p>
+        <h2 id="research-question">{CENTRAL_RESEARCH_QUESTION}</h2>
+      </div>
+
+      <ol className="investigation-questions" aria-label="Three investigative questions">
+        <li>
+          <span>Question 1</span>
+          <strong>Did overcrowding actually fall?</strong>
+          <p>Examine overcrowded household counts and rates from 2011 to 2021.</p>
+        </li>
+        <li>
+          <span>Question 2</span>
+          <strong>What kinds of homes were built?</strong>
+          <p>Examine total development, bedroom mix and affordable family-sized delivery.</p>
+        </li>
+        <li>
+          <span>Question 3</span>
+          <strong>What does it cost to gain another bedroom?</strong>
+          <p>Compare private-market bedroom rent steps with local earnings.</p>
+        </li>
+      </ol>
+
+      <div className="first-reveal">
+        <p className="section-kicker">First finding · Did overcrowding fall?</p>
+        <h2>The household count grew. The overcrowded count barely moved.</h2>
+        <div className="stat-row">
+          <div className="stat">
+            <span className="stat-label">Households in Lewisham</span>
+            <span className="stat-value stat-value--up">+{n(change.households)}</span>
+            <span className="stat-detail">{n(y2011.households)} → {n(y2021.households)}</span>
+          </div>
+          <div className="stat stat--hero">
+            <span className="stat-label">Overcrowded households</span>
+            <span className="stat-value stat-value--flat">−{n(Math.abs(change.overcrowded))}</span>
+            <span className="stat-detail">{n(y2011.overcrowded)} → {n(y2021.overcrowded)}</span>
+          </div>
+          <div className="stat">
+            <span className="stat-label">Overcrowding rate</span>
+            <span className="stat-value stat-value--muted">{pct2(y2011.rate)} → {pct2(y2021.rate)}</span>
+            <span className="stat-detail">{change.ratePp}pp, as the household denominator grew</span>
+          </div>
+        </div>
+        <p className="pairing-note">
+          The overcrowding <strong>rate</strong> fell as the total household denominator grew,
+          while the <strong>count</strong> was essentially flat. Both measures must be read
+          together. The evidence places household growth and overcrowding alongside one another;
+          it does not show that development caused the outcome.
         </p>
       </div>
 
-      <div className="overview-block">
-        <p className="section-kicker">Project scope</p>
-        <h2>Three connected strands</h2>
-        <ol className="overview-strands">
-          <li>
-            <strong>Overcrowding outcome</strong>
-            <span>Count, rate and geographic variation between Census 2011 and Census 2021.</span>
-          </li>
-          <li>
-            <strong>Housing supply and bedroom mix</strong>
-            <span>Completed one- and two-bedroom versus three-bedroom-or-larger supply, including affordable family-sized delivery where the data permits.</span>
-          </li>
-          <li>
-            <strong>Access to additional space</strong>
-            <span>Private-market rent steps between bedroom sizes, compared with median gross annual earnings of full-time Lewisham residents.</span>
-          </li>
-        </ol>
-      </div>
-
-      <div className="overview-block overview-block--objective">
-        <p className="section-kicker">Objective</p>
-        <h2>Ask whether households can realistically move</h2>
-        <p>
-          The evidence documents a mismatch between persistent overcrowding, the bedroom mix
-          of housing supply, and the financial cost of obtaining additional space. It does
-          not establish that one caused another. Lewisham provides the first implementation
-          of a transparent method designed for reuse elsewhere.
-        </p>
-      </div>
+      <p className="investigation-purpose">
+        A local controversy generated the question. Lewisham is the first case study. The
+        method is intended to travel across London boroughs and, where comparable development
+        data exists, be adapted elsewhere.
+      </p>
     </section>
   )
 }

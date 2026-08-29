@@ -3,6 +3,13 @@
 An evidence-based investigation into why household overcrowding can remain
 stubbornly high despite substantial housing development.
 
+The debate around the consented Lewisham Shopping Centre redevelopment was the
+real-world case that prompted the investigation. Campaign concerns about
+affordability and family-sized housing generated questions to test independently
+against historical overcrowding, development, private-rent and earnings data.
+Those concerns are treated as attributed positions, not established findings;
+the project is not an advocacy evidence pack.
+
 Lewisham is the initial case study. The project combines Census overcrowding
 data, the bedroom mix of completed housing development, and the cost of gaining
 an additional bedroom relative to local earnings.
@@ -13,9 +20,7 @@ authorities where comparable development data is available.
 
 The central question is:
 
-> Why can household overcrowding remain stalled despite substantial housing
-> construction, and what prevents households that need more space from moving
-> into suitably sized homes?
+> Why can household overcrowding remain stalled despite substantial housing construction, and what prevents households that need more space from moving into suitably sized homes?
 
 ## Project scope
 

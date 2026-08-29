@@ -34,6 +34,7 @@ export default function BedroomMix({ dark }) {
 
   return (
     <section className="section mix" aria-labelledby="mix-h">
+      <p className="section-kicker">Question 2 · Housing supply and bedroom mix</p>
       <h2 id="mix-h">What actually got built</h2>
       <p className="section-lede">
         Lewisham recorded <strong>{n(s.homes_gained)} homes gained</strong> in completed

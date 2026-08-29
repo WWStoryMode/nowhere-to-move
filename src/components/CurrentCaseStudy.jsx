@@ -4,13 +4,12 @@ import { n } from '../lib/format.js'
 export default function CurrentCaseStudy() {
   return (
     <section className="section case-study" aria-labelledby="case-h">
-      <p className="section-kicker">Contemporary case study</p>
-      <h2 id="case-h">Lewisham Shopping Centre redevelopment</h2>
+      <p className="section-kicker">Back to the contemporary case</p>
+      <h2 id="case-h">What should we ask about what gets built next?</h2>
       <p className="section-lede">
-        The consented redevelopment is a live example of current debates about housing
-        quantity, affordability and bedroom mix. It connects the historical 2011–2021
-        evidence with decisions about what is built next; it is not treated as a cause of
-        the overcrowding recorded by either census.
+        The Lewisham Shopping Centre redevelopment started this investigation. The evidence
+        now returns us to that case with a framework for asking about housing quantity,
+        bedroom size, tenure and realistic access to additional space.
       </p>
       <div className="case-stats">
         <div><strong>{n(CONSENTED.homes)}</strong><span>conventional homes</span></div>
@@ -20,6 +19,12 @@ export default function CurrentCaseStudy() {
       <p>
         {CONSENTED.bedroomNote} No bedroom breakdown is charted because verified per-unit
         counts are not present in this repository.
+      </p>
+      <p>
+        Historical Census, development, rent and earnings evidence cannot predict the
+        scheme’s future effects. It does not show that the redevelopment caused past
+        overcrowding, that it will cause a future outcome, or that any party to the debate
+        is proved correct.
       </p>
       <p className="mix-attrib">{CONSENTED.attribution}</p>
     </section>
